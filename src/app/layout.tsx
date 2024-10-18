@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import MainLayout from "@/componets/layouts/MainLayout";
+import MainLayout from "@/components/layouts/MainLayout";
+import Provider from "@/providers/Provider";
+import Link from "next/link";
 import Image from "next/image";
 
 const geistSans = localFont({
@@ -27,13 +29,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <MainLayout>
-          {children}
+          <Provider>
+            {children}
+          </Provider>
+
         </MainLayout>
-        <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center h-10">
-          <a
+        {/* Footer */}
+        <footer className="bg-black text-white row-start-3 flex gap-6 flex-wrap items-center justify-center h-12">
+          <Link
             className="flex items-center gap-2 hover:underline hover:underline-offset-4"
             href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
             target="_blank"
@@ -47,8 +52,8 @@ export default function RootLayout({
               height={16}
             />
             Learn
-          </a>
-          <a
+          </Link>
+          <Link
             className="flex items-center gap-2 hover:underline hover:underline-offset-4"
             href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
             target="_blank"
@@ -62,8 +67,8 @@ export default function RootLayout({
               height={16}
             />
             Examples
-          </a>
-          <a
+          </Link>
+          <Link
             className="flex items-center gap-2 hover:underline hover:underline-offset-4"
             href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
             target="_blank"
@@ -77,7 +82,7 @@ export default function RootLayout({
               height={16}
             />
             Go to nextjs.org →
-          </a>
+          </Link>
         </footer>
       </body>
     </html>
