@@ -7,7 +7,7 @@ import MyLink, { MyLinkHover } from '@/components/MyLinks/MyLink'
 export const Hero = () => {
     return (
         <Container classname='py-20'>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-5'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-5 py-10'>
                 <div>
                     <h1 className='font-extrabold text-2xl sm:text-3xl lg:text-5xl'>I&apos;M,</h1>
                     <div className='flex items-center flex-wrap gap-2'>
