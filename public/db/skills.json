@@ -1,0 +1,75 @@
+{
+    "skills": [
+      {
+        "name": "React",
+        "description": "A JavaScript library for building dynamic user interfaces, primarily used for single-page applications.",
+        "img": ["https://example.com/react.jpg"]
+      },
+      {
+        "name": "Redux & RTK Query",
+        "description": "A state management tool with a powerful API data-fetching library that provides an efficient way to manage application state and interact with external data sources.",
+        "img": ["https://example.com/redux-rtkquery.jpg"]
+      },
+      {
+        "name": "Next.js",
+        "description": "A React framework for server-side rendering, static site generation, and building full-stack applications.",
+        "img": ["https://example.com/nextjs.jpg"]
+      },
+      {
+        "name": "HTML & CSS",
+        "description": "The fundamental building blocks of the web, used for structuring and styling content on websites.",
+        "img": ["https://example.com/html-css.jpg"]
+      },
+      {
+        "name": "MongoDB & Mongoose",
+        "description": "MongoDB is a NoSQL database, and Mongoose is an ODM library that provides a schema-based solution for modeling MongoDB data.",
+        "img": ["https://example.com/mongodb-mongoose.jpg"]
+      },
+      {
+        "name": "Tailwind CSS & Bootstrap",
+        "description": "Tailwind is a utility-first CSS framework, while Bootstrap is a popular CSS framework for responsive design, both helping to style websites quickly.",
+        "img": ["https://example.com/tailwind-bootstrap.jpg"]
+      },
+      {
+        "name": "JavaScript",
+        "description": "A versatile programming language used to add interactive functionality to websites and applications.",
+        "img": ["https://example.com/javascript.jpg"]
+      },
+      {
+        "name": "TanStack Query & Axios",
+        "description": "TanStack Query is a data-fetching library for managing server-side state, while Axios is a promise-based HTTP client for making requests to APIs.",
+        "img": ["https://example.com/tanstack-axios.jpg"]
+      },
+      {
+        "name": "Node.js & Express.js",
+        "description": "Node.js is a JavaScript runtime environment, and Express.js is a minimal Node.js framework for building web servers and APIs.",
+        "img": ["https://example.com/node-express.jpg"]
+      },
+      {
+        "name": "TypeScript",
+        "description": "A superset of JavaScript that adds static types, improving the development process by catching errors early.",
+        "img": ["https://example.com/typescript.jpg"]
+      },
+      {
+        "name": "Git & NPM",
+        "description": "Git is a version control system, and NPM is the default package manager for Node.js, both essential for modern web development.",
+        "img": ["https://example.com/git-npm.jpg"]
+      },
+      {
+        "name": "Ant Design & NextUI",
+        "description": "Ant Design is a React UI framework for building enterprise-level applications, while NextUI is a modern React UI library for fast web development.",
+        "img": ["https://example.com/antd-nextui.jpg"]
+      },
+      {
+        "name": "JWT Authentication",
+        "description": "A token-based authentication method used to securely transmit information between parties in a compact, URL-safe format.",
+        "img": ["https://example.com/jwt.jpg"]
+      },
+      {
+        "name": "Firebase & NextAuth",
+        "description": "Firebase Authentication provides easy authentication via multiple methods, while NextAuth is an open-source authentication solution for Next.js applications.",
+        "img": ["https://example.com/firebase-nextauth.jpg"]
+      }
+    ]
+  }
+  

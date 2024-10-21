@@ -20,9 +20,8 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
                         {isSidebarOpen ? <FaTimes /> : <FaBars />}
                     </button>
                 </div>
-
                 {/* Sidebar */}
-                <div className={`bg-gray-200 border-r-2 border-gray-400 w-full md:w-1/4 p-6 space-y-6 transition-transform transform fixed md:static top-0 left-0 h-full md:h-auto z-20 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}>
+                <div className={`bg-gray-200 border-r-2 border-gray-400 w-[350px] p-3 md:p-6 space-y-6 transition-transform transform fixed md:static top-0 left-0 h-full md:h-auto z-0 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}>
                     {/* Profile Info */}
                     <div className="flex items-center space-x-4">
                         <FaUserCircle size={50} className="text-gray-400" />
@@ -41,7 +40,7 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
                 </div>
 
                 {/* Content Area */}
-                <div className="bg-gray-100 w-full md:w-3/4 p-3 md:p-6 ml-0 md:ml-0 overflow-y-scroll">
+                <div className="bg-white w-full md:flex-1 p-3 md:p-6 overflow-y-scroll">
                     {children}
                 </div>
             </div>

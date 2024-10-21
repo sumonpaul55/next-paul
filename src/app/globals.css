@@ -2,26 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+.animateBg{
+  animation-name: bganimation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+@keyframes bganimation {
+  0%{
+    transform: rotate(0deg);
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  25%{
+    transform: rotate(-10deg);
+  }
+  50%{
+    transform: rotate(0deg);
+  }
+  75%{
+    transform: rotate(10deg);
+  }
+  100%{
+    transform: rotate(0);
   }
 }

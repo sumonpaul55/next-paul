@@ -8,18 +8,18 @@ import Image from "next/image";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+  variable: "--geist-sans",
   weight: "100 900",
 });
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+  variable: "--geist-mono",
   weight: "100 900",
 });
 
 export const metadata: Metadata = {
-  title: "Create Next App",
-  description: "",
+  title: "Portfolio || Sumon Paul",
+  description: "Passionate web developer with a focus on creating dynamic and visually appealing websites that drive user engagement.",
 };
 
 export default function RootLayout({
@@ -30,20 +30,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <MainLayout>
-          <Provider>
+        <Provider>
+          <MainLayout>
             {children}
-          </Provider>
-
-        </MainLayout>
+          </MainLayout>
+        </Provider>
         {/* Footer */}
-        <footer className="bg-black text-white row-start-3 flex gap-6 flex-wrap items-center justify-center h-12">
+        <footer className="bg-black text-white row-start-3 flex gap-6 flex-wrap items-center justify-center h-12 z-50">
           <Link
             className="flex items-center gap-2 hover:underline hover:underline-offset-4"
             href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             <Image
               aria-hidden
               src="https://nextjs.org/icons/file.svg"

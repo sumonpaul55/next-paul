@@ -13,6 +13,11 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        baseGray: "#ECE5E8",
+      },
+      fontFamily: {
+        sans: ["var(--geist-sans)"],
+        mono: ["var(--geist-mono)"],
       },
     },
   },
