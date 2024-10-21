@@ -1,6 +1,5 @@
 import { Hero } from "@/pages/home/Hero";
 import WhatIDo from "@/pages/home/WhatIDo";
-import { Divider } from "@nextui-org/react";
 
 
 
