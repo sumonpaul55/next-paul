@@ -7,18 +7,18 @@ const AnimateText = () => {
         <TypeAnimation
             sequence={[
                 // Same substring at the start will only be typed out once, initially
-                'I"m Front-End developer',
+                'Front-End',
                 1000, // wait 1s before replacing "Mice" with "Hamsters"
-                'I"m React.js Developer',
-                1000,
-                'I"m Next.js Developer',
-                1000,
-                'I"m Mern-Stack Developer',
-                1000
+                'React.js',
+                2000,
+                'Next.js',
+                2000,
+                'Mern-Stack',
+                2000
             ]}
             wrapper="span"
-            speed={50}
-            style={{ fontSize: '3em', display: 'inline-block', fontWeight: "800" }}
+            speed={2}
+            style={{ fontSize: '3em', display: 'inline-block', fontWeight: "600", color: "#3b82f6" }}
             repeat={Infinity}
         />
     )

@@ -13,12 +13,24 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        baseGray: "#ECE5E8",
+        baseGray: "#E9E7E8",
+        TextHeading: "#030014",
+        primary: "#3b82f6",
       },
       fontFamily: {
         sans: ["var(--geist-sans)"],
         mono: ["var(--geist-mono)"],
+        roboto_slab: ["var(--Roboto_Slab)"],
       },
+      // keyframes: {
+      //   backgroundPulse: {
+      //     "0%": { backgroundColor: "#1D4ED8" }, // Starting with primary color
+      //     "100%": { backgroundColor: "#3B82F6" }, // Ending with lighter primary color
+      //   },
+      // },
+      // animation: {
+      //   "background-pulse": "backgroundPulse 0.5s ease-in-out forwards",
+      // },
     },
   },
   darkMode: "class",
