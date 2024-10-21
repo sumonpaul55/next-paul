@@ -20,14 +20,25 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
         <div className="h-[calc(100vh-48px)]">
             <div className="h-full flex flex-col lg:flex-row">
                 {/* Toggle button for small screens */}
-                <div className={`lg:hidden p-3 bg-gray-800 rounded-full size-11 flex justify-center items-center fixed top-2 bg-opacity-70 z-50 ${isSidebarOpen ? "right-2" : "left-2"}`}>
-                    <button onClick={toggleSidebar}
-                        className="text-xl  text-white focus:outline-none">
-                        {isSidebarOpen ? <FaTimes /> : <FaBars />}
-                    </button>
-                </div>
+                {
+                    !isSidebarOpen && <div className={`lg:hidden p-3 bg-gray-800 rounded-full size-11 flex justify-center items-center fixed top-2 bg-opacity-70 z-50 ${isSidebarOpen ? "right-2" : "left-2"}`}>
+                        <button onClick={toggleSidebar}
+                            className="text-xl  text-white focus:outline-none">
+                            <FaBars />
+                        </button>
+                    </div>
+                }
                 {/* Sidebar */}
-                <div className={`bg-gray-50 border-r-1 border-gray-200 w-[350px] p-3 md:p-6 space-y-6 transition-transform transform fixed lg:static top-0 left-0 h-full lg:h-auto z-50 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0`}>
+                <div className={`bg-gray-50 border-r-1 border-gray-200 w-[250px] sm:w-[350px] p-3 md:p-6 space-y-6 transition-transform transform fixed lg:static top-0 left-0 h-full lg:h-auto z-50 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0`}>
+
+                    {
+                        isSidebarOpen && <div className={`lg:hidden p-3 bg-gray-800 rounded-full size-11 flex justify-center items-center fixed top-2 bg-opacity-70 z-50 ${isSidebarOpen ? "right-2" : "left-2"}`}>
+                            <button onClick={toggleSidebar}
+                                className="text-xl  text-white focus:outline-none">
+                                <FaTimes />
+                            </button>
+                        </div>
+                    }
                     {/* Profile Info */}
                     <div className="text-center space-x-4">
                         <FaUserCircle size={50} className="text-gray-400 mx-auto" />
@@ -56,7 +67,7 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
                 </div>
 
                 {/* Content Area */}
-                <div className="bg-white w-full lg:flex-1 p-3 md:p-6 overflow-y-scroll">
+                <div className="bg-white w-full lg:flex-1 overflow-y-scroll">
                     {children}
                 </div>
             </div>

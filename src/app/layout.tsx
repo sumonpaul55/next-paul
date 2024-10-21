@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Roboto_Slab } from 'next/font/google'
-
+import { Open_Sans, Roboto_Slab } from 'next/font/google'
 import "./globals.css";
 import MainLayout from "@/components/layouts/MainLayout";
 import Provider from "@/providers/Provider";
@@ -18,10 +17,15 @@ const geistMono = localFont({
   variable: "--geist-mono",
   weight: "100 900",
 });
+
 const roboto_slab = Roboto_Slab({
   weight: '400',
   subsets: ['latin'],
   variable: "--roboto_slab"
+})
+const open_sans = Open_Sans({
+  subsets: ['latin'],
+  variable: "--open_sans"
 })
 export const metadata: Metadata = {
   title: "Portfolio || Sumon Paul",
@@ -35,7 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${roboto_slab.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${roboto_slab.variable} ${open_sans.variable} antialiased`}>
         <Provider>
           <MainLayout>
             {children}

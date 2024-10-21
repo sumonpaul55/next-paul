@@ -15,11 +15,11 @@ export const Hero = () => {
                     </div>
                     <div className='mt-10'>
                         <p className='text-TextHeading md:text-lg'>
-                            I&apos;m a passionate web developer with a focus on creating dynamic and visually appealing websites that drive user engagement. With expertise in both front-end and back-end technologies, including Next.js, TypeScript, React, Node.js, and MongoDB
+                            I am <span className='text-primary font-semibold'>Sumon Chandra Paul</span>. I&apos;m a passionate web developer with a focus on creating dynamic and visually appealing websites that drive user engagement. With expertise in both front-end and back-end technologies, including Next.js, TypeScript, React, Node.js, and MongoDB
                         </p>
                     </div>
                     <div className='mt-10 flex gap-10'>
-                        <MyLink url='https://drive.google.com/file/d/1dlwy3VGj3ZyRw2T8RS5PAypqCFO3VIsg/view?usp=sharing' target="_blank" className="bg-primary text-white p-2 rounded-md font-semibold font-sans">
+                        <MyLink url='https://drive.google.com/file/d/1dlwy3VGj3ZyRw2T8RS5PAypqCFO3VIsg/view?usp=sharing' target="_blank" className="bg-primary text-white border p-2 rounded-md font-semibold font-sans hover:bg-white hover:text-primary hover:border border-primary duration-400">
                             View Resume
                         </MyLink>
                         <MyLinkHover url='https://drive.usercontent.google.com/u/0/uc?id=1dlwy3VGj3ZyRw2T8RS5PAypqCFO3VIsg&export=download' className="" >

@@ -21,6 +21,7 @@ const config: Config = {
         sans: ["var(--geist-sans)"],
         mono: ["var(--geist-mono)"],
         roboto_slab: ["var(--Roboto_Slab)"],
+        open_sans: ["var(--open_sans)"],
       },
       // keyframes: {
       //   backgroundPulse: {
