@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import { Open_Sans, Roboto_Slab } from 'next/font/google'
 import "./globals.css";
 import MainLayout from "@/components/layouts/MainLayout";
-import Provider from "@/providers/Provider";
+import Provider from "@/app/libs/providers/Provider";
 import Link from "next/link";
 import Image from "next/image";
 

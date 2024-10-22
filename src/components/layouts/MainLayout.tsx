@@ -5,12 +5,14 @@ import { menuBar } from "./menuBar";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaLinkedin } from "react-icons/fa6";
-import { Divider } from "@nextui-org/react";
+import { Divider, } from "@nextui-org/react";
 import { Tmenu } from "@/types";
+import { useUser } from "@/context/user.provider";
 
 const MainLayout = ({ children }: { children: ReactNode }) => {
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const { user, isloading } = useUser()
     const pathname = usePathname()
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     // Toggle function to open/close sidebar
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
@@ -58,6 +60,9 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
                     <div className="flex flex-col gap-2">
                         {
                             menuBar?.map((items: Tmenu, idx) => {
+                                if (items?.url === "/dashboard" && user?.role !== "ADMIN" && !isloading) {
+                                    return
+                                }
                                 return <Link key={idx} href={`${items?.url}`} className={`cursor-pointer bg-opacity-60 p-2 rounded font-semibold font-sans border hover:border-gray-300 hover:shadow ${pathname === items.url ? "bg-primary-600 text-white" : ""}`}>
                                     {items.name}
                                 </Link>
