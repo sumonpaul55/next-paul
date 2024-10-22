@@ -9,13 +9,13 @@ export const Hero = () => {
         <Container classname='py-20'>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-5 py-10'>
                 <div>
-                    <h1 className='font-extrabold text-2xl sm:text-3xl lg:text-5xl'>I&apos;M,</h1>
+                    <h1 className='font-extrabold text-2xl sm:text-3xl font-open_sans'>I&apos;M,</h1>
                     <div className='flex items-center flex-wrap gap-2'>
                         <AnimateText /> <h2 className='text-5xl lg:text-[3em] font-[800]'>Developer</h2>
                     </div>
                     <div className='mt-10'>
                         <p className='text-TextHeading md:text-lg'>
-                            I am <span className='text-primary font-semibold'>Sumon Chandra Paul</span>. I&apos;m a passionate web developer with a focus on creating dynamic and visually appealing websites that drive user engagement. With expertise in both front-end and back-end technologies, including Next.js, TypeScript, React, Node.js, and MongoDB
+                            I am <span className='text-primary font-semibold'>Sumon Chandra Paul</span>. I&apos;m a passionate web developer with a focus on creating dynamic and visually appealing websites that drive user engagement. With expertise in both front-end and back-end technologies, including Next.js, TypeScript, React, Node.js, and MongoDB.
                         </p>
                     </div>
                     <div className='mt-10 flex gap-10'>
