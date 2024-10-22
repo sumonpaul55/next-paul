@@ -27,10 +27,10 @@ export const Hero = () => {
                         </MyLinkHover>
                     </div>
                 </div>
-                <div className='flex justify-center'>
-                    <div>
+                <div className='flex justify-end'>
+                    <div className=''>
                         <div className='relative z-[2]'>
-                            <div>
+                            <div className=''>
                                 <Image src={img} alt='Sumon Paul' height={500} width={400} className='lg:max-w-[350px]' />
                             </div>
                             <div className='bg-blue-500 animateBg absolute h-full w-full top-0 left-0 z-[-1]'></div>

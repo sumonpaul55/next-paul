@@ -18,14 +18,15 @@ const MyForm = ({ children, onSubmit, defaultValues, resolver }: Iprops) => {
     const formConfig: TFormConfig = {};
 
     if (!!defaultValues) {
-        formConfig["defaultValues"] = defaultValues
+        formConfig["defaultValues"] = defaultValues;
     }
     if (!!resolver) {
-        formConfig["resolver"] = resolver
+        formConfig["resolver"] = resolver;
     }
-    const methods = useForm()
+    const methods = useForm(formConfig);
     // get the function from method
-    const submitHandler = methods.handleSubmit
+    const submitHandler = methods.handleSubmit;
+
     return (
         <FormProvider {...methods}>
             <form onSubmit={submitHandler(onSubmit)}>
