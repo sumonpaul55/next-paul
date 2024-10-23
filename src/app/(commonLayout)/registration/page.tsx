@@ -5,16 +5,34 @@ import Container from "@/components/Container"
 import MyForm from "@/components/form/MyForm"
 import MyInput from "@/components/form/MyInput"
 import { MyTextArea } from "@/components/form/MyTextArea"
+import LoadingBlur from "@/components/shared/LoadingBlur"
+import { useUserRegistration } from "@/hooks/auth.hooks"
 import { registerValidation } from "@/validation/registerValidation"
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Button } from "@nextui-org/react"
+import { redirect } from "next/navigation"
 import { useState } from "react"
 import { FieldValues, SubmitHandler } from "react-hook-form"
 
 const Registration = () => {
+    const { mutate: handleUserRegistration, isPending, isSuccess } = useUserRegistration();
+
     const [image, setImage] = useState()
     const handleSubmit: SubmitHandler<FieldValues> = (data) => {
-        console.log(data)
+        const formData = new FormData();
+        if (image) {
+            formData.append("data", JSON.stringify(data))
+            formData.append("image", image)
+        }
+        handleUserRegistration(formData)
+    }
+
+
+    if (isPending) {
+        return <LoadingBlur />
+    }
+    if (!isPending && isSuccess) {
+        redirect("/")
     }
     return (
         <Container classname="py-20">

@@ -1,11 +1,9 @@
-import envConfig from "@/config/envConfig";
 import axios from "axios";
 import { cookies } from "next/headers";
 
 const axiosInstance = axios.create({
-  baseURL: envConfig.baseApi,
+  baseURL: "http://localhost:5000/api",
 });
-
 axiosInstance.interceptors.request.use(
   function (config) {
     const cookiStore = cookies();
