@@ -1,5 +1,5 @@
-import Container from "@/components/Container"
-import SectionTitle from "@/components/shared/SectionTitle"
+import Container from "@/src/components/Container"
+import SectionTitle from "@/src/components/shared/SectionTitle"
 
 const page = () => {
     return (

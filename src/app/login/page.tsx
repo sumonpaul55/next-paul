@@ -1,8 +1,8 @@
 "use client"
-import Container from "@/components/Container";
-import MyForm from "@/components/form/MyForm";
-import MyInput from "@/components/form/MyInput";
-import loginValidationSchema from "@/validation/loginvalidation";
+import Container from "@/src/components/Container";
+import MyForm from "@/src/components/form/MyForm";
+import MyInput from "@/src/components/form/MyInput";
+import loginValidationSchema from "@/src/validation/loginvalidation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@nextui-org/react";
 import Link from "next/link";

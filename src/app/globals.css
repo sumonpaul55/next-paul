@@ -28,3 +28,10 @@
     transform: rotate(0);
   }
 }
+
+.educationSection{
+  background:linear-gradient( #ffffffe8, #ffffffe8), url("../../public/img/bgEdu.jpg");
+  background-size: contain;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  }

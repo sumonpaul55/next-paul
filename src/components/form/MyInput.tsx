@@ -1,5 +1,6 @@
 "use client"
-import { TINput } from '@/types'
+
+import { TINput } from '@/src/types';
 import { Input } from '@nextui-org/react'
 import React from 'react'
 import { useFormContext } from 'react-hook-form';

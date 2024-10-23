@@ -1,13 +1,16 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+// /* eslint-disable @typescript-eslint/no-explicit-any */
 "use server";
-import axiosInstance from "@/app/libs/AxiosInstance";
+
+import myInstance from "@/src/libs/AxiosInstance";
+
 import { jwtDecode } from "jwt-decode";
 import { cookies } from "next/headers";
 import { FieldValues } from "react-hook-form";
 
 export const registerUser = async (userData: FieldValues) => {
   try {
-    const { data } = await axiosInstance.post("/auth/register", userData);
+    const { data } = await myInstance.post("/auth/register", userData);
     console.log("data after register", data);
     if (data?.success) {
       cookies().set("accessToken", data?.data?.accessToken);
@@ -21,11 +24,11 @@ export const registerUser = async (userData: FieldValues) => {
 
 export const loginUser = async (userData: FieldValues) => {
   try {
-    const { data } = await axiosInstance.post("/auth/login", userData);
-    if (data.success) {
-      cookies().set("accessToken", data?.data?.accessToken);
-      cookies().set("refreshToken", data?.data?.refreshToken);
-    }
+    const { data } = await myInstance.post("/auth/login", userData);
+    // if (data.success) {
+    //   cookies().set("accessToken", data?.data?.accessToken);
+    //   cookies().set("refreshToken", data?.data?.refreshToken);
+    // }
     return data;
   } catch (error: any) {
     throw new Error(error);

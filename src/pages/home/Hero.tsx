@@ -1,9 +1,10 @@
-import Container from '@/components/Container'
+
 import React from 'react'
-import img from "@/../public/img/paul.png"
+import img from "@/src/../public/img/paul.png"
 import Image from 'next/image'
 import AnimateText from './AnimateText'
-import MyLink, { MyLinkHover } from '@/components/MyLinks/MyLink'
+import Container from '@/src/components/Container'
+import MyLink, { MyLinkHover } from '@/src/components/MyLinks/MyLink'
 export const Hero = () => {
     return (
         <Container classname='py-20'>

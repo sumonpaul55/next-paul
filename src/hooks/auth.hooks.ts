@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { loginUser, registerUser } from "@/services/authService/user";
 import { useMutation } from "@tanstack/react-query";
 import { FieldValues } from "react-hook-form";
 import { toast } from "sonner";
+import { loginUser, registerUser } from "../services/authService/user";
 
 export const useUserRegistration = () => {
   return useMutation<any, Error, FieldValues>({
@@ -13,8 +13,7 @@ export const useUserRegistration = () => {
       toast.success("Registered successfully");
     },
     onError: (error: any) => {
-      console.log(error);
-      //   toast.error(error);
+      toast.error(error);
     },
   });
 };

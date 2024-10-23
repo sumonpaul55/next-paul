@@ -1,6 +1,6 @@
 "use client"
-import { getCurrentUser } from "@/services/authService/user";
-import { TUser } from "@/types";
+import { getCurrentUser } from "@/src/services/authService/user";
+import { TUser } from "@/src/types";
 import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useEffect, useState } from "react";
 
 

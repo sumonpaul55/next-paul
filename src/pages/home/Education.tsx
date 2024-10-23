@@ -2,16 +2,19 @@
 // components/EducationSection.tsx
 import { Card, CardBody, } from '@nextui-org/react';
 import Image from 'next/image';
-import educationIcon from "@/../public/img/educatation.png"
+import educationIcon from "@/src/../public/img/educatation.png"
+import SectionTitle from '@/src/components/shared/SectionTitle';
 const EducationSection: React.FC = () => {
     return (
-        <section className="py-12 bg-gray-100">
+        <section className="pt-10 pb-20 educationSection">
             <div className="container mx-auto px-4">
-                <h2 className="text-4xl font-bold text-center mb-8">Education</h2>
-
+                {/* <h2 className="text-lg md:text-3xl lg:text-4xl font-bold text-center mb-12">Education</h2> */}
+                <SectionTitle title="Education" className=''>
+                    <p>All of my educational qualifiction</p>
+                </SectionTitle>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
                     {/* MBA Section */}
-                    <Card className="mb-6" isHoverable>
+                    <Card className="" isHoverable>
                         <CardBody>
                             <div className='flex gap-4 mb-5 items-center'>
                                 <div className='bg-gray-200 size-16 rounded-full flex justify-center items-center'>
@@ -29,7 +32,7 @@ const EducationSection: React.FC = () => {
                         </CardBody>
                     </Card>
 
-                    <Card className="mb-6" isHoverable>
+                    <Card className="" isHoverable>
                         <CardBody>
                             <div className='flex gap-4 mb-5 items-center'>
                                 <div className='bg-gray-200 size-16 rounded-full flex justify-center items-center'>
@@ -49,7 +52,7 @@ const EducationSection: React.FC = () => {
                         </CardBody>
                     </Card>
                     {/* BBA Section */}
-                    <Card className="mb-6" isHoverable>
+                    <Card className="" isHoverable>
                         <CardBody>
                             <div className='flex gap-4 mb-5 items-center'>
                                 <div className='bg-gray-200 size-16 rounded-full flex justify-center items-center'>
@@ -69,7 +72,7 @@ const EducationSection: React.FC = () => {
                     </Card>
 
                     {/* Developer Proficiency Section */}
-                    <Card className="mb-6" isHoverable>
+                    <Card className="" isHoverable>
                         <CardBody>
                             <div className='flex gap-4 mb-5 items-center'>
                                 <div className='bg-gray-200 size-16 rounded-full flex justify-center items-center'>

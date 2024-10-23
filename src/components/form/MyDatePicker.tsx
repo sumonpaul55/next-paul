@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-import { TINput } from "@/types"
+import { TINput } from "@/src/types"
 import { DatePicker } from "@nextui-org/date-picker"
 import { Controller } from "react-hook-form"
 

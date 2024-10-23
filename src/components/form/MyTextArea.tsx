@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-object-type */
 "use client"
 
-import { TINput } from '@/types';
+import { TINput } from '@/src/types';
 import { Textarea } from '@nextui-org/input'
 import React from 'react'
 import { useFormContext } from 'react-hook-form';

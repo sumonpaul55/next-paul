@@ -1,13 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 
-import Container from "@/components/Container"
-import MyForm from "@/components/form/MyForm"
-import MyInput from "@/components/form/MyInput"
-import { MyTextArea } from "@/components/form/MyTextArea"
-import LoadingBlur from "@/components/shared/LoadingBlur"
-import { useUserRegistration } from "@/hooks/auth.hooks"
-import { registerValidation } from "@/validation/registerValidation"
+
+import Container from '@/src/components/Container'
+import MyForm from '@/src/components/form/MyForm'
+import MyInput from '@/src/components/form/MyInput'
+import { MyTextArea } from '@/src/components/form/MyTextArea'
+import LoadingBlur from '@/src/components/shared/LoadingBlur'
+import { useUserRegistration } from '@/src/hooks/auth.hooks'
+import { registerValidation } from '@/src/validation/registerValidation'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Button } from "@nextui-org/react"
 import { redirect } from "next/navigation"
@@ -15,18 +16,20 @@ import { useState } from "react"
 import { FieldValues, SubmitHandler } from "react-hook-form"
 
 const Registration = () => {
-    const { mutate: handleUserRegistration, isPending, isSuccess } = useUserRegistration();
-
+    const { mutate, isPending, isSuccess } = useUserRegistration();
     const [image, setImage] = useState()
-    const handleSubmit: SubmitHandler<FieldValues> = (data) => {
-        const formData = new FormData();
-        if (image) {
-            formData.append("data", JSON.stringify(data))
-            formData.append("image", image)
-        }
-        handleUserRegistration(formData)
-    }
 
+    const handleSubmit: SubmitHandler<FieldValues> = (data) => {
+        if (image) {
+            const formData = new FormData();
+            const allData = { ...data }
+            formData.append("data", JSON.stringify(allData))
+
+
+            formData.append("image", image)
+            mutate(formData)
+        }
+    }
 
     if (isPending) {
         return <LoadingBlur />

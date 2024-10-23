@@ -6,8 +6,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaLinkedin } from "react-icons/fa6";
 import { Divider, } from "@nextui-org/react";
-import { Tmenu } from "@/types";
-import { useUser } from "@/context/user.provider";
+import { Tmenu } from "@/src/types";
+import { useUser } from "@/src/context/user.provider";
 import LoadingSpinner from "../shared/LoadingSpinner";
 
 const MainLayout = ({ children }: { children: ReactNode }) => {
@@ -77,6 +77,7 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
                             !isloading && user ? <h3 className="w-full bg-gray-200 py-1 md:text-lg px-3 rounded-lg">{user?.email}</h3> :
                                 <Link href={`/login`} className="w-full py-1 rounded-lg text-center block bg-primary text-white md:text-lg">Login</Link>
                         }
+                        <Link href={`/registration`}>dfdsfsdf</Link>
                     </div>
                 </div>
 
