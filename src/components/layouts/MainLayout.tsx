@@ -8,6 +8,7 @@ import { FaLinkedin } from "react-icons/fa6";
 import { Divider, } from "@nextui-org/react";
 import { Tmenu } from "@/types";
 import { useUser } from "@/context/user.provider";
+import LoadingSpinner from "../shared/LoadingSpinner";
 
 const MainLayout = ({ children }: { children: ReactNode }) => {
     const { user, isloading } = useUser()
@@ -58,9 +59,9 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
                     </div>
                     <Divider />
                     <div className="flex flex-col gap-2">
-                        {
+                        {isloading ? <LoadingSpinner /> :
                             menuBar?.map((items: Tmenu, idx) => {
-                                if (items?.url === "/dashboard" && user?.role !== "ADMIN" && !isloading) {
+                                if (items?.url === "/dashboard" && user?.role !== "ADMIN") {
                                     return
                                 }
                                 return <Link key={idx} href={`${items?.url}`} className={`cursor-pointer bg-opacity-60 p-2 rounded font-semibold font-sans border hover:border-gray-300 hover:shadow ${pathname === items.url ? "bg-primary-600 text-white" : ""}`}>
