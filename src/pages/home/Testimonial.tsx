@@ -1,4 +1,5 @@
 "use client"
+import SectionTitle from '@/src/components/shared/SectionTitle';
 // components/TestimonialSlider.tsx
 import { Card, Avatar, CardBody } from '@nextui-org/react';
 import Carousel from 'react-multi-carousel';
@@ -38,39 +39,36 @@ const testimonials = [
 
 const TestimonialSlider = () => {
     const responsive = {
-        superLargeDesktop: {
-            // the naming can be any, depends on you.
-            breakpoint: { max: 4000, min: 3000 },
-            items: 5
-        },
         desktop: {
-            breakpoint: { max: 3000, min: 1024 },
+            breakpoint: { max: 3000, min: 1600 },
             items: 3
         },
         tablet: {
-            breakpoint: { max: 1024, min: 464 },
+            breakpoint: { max: 1600, min: 768 },
             items: 2
         },
         mobile: {
-            breakpoint: { max: 464, min: 0 },
+            breakpoint: { max: 768, min: 0 },
             items: 1
         }
     };
 
     return (
         <section className="py-12 bg-gray-50">
-            <div className="container mx-auto px-4 text-center">
-                <h2 className="text-4xl font-bold mb-8">What Our Clients Say</h2>
+            <div className="container mx-auto md:px-4 text-center">
+                <SectionTitle title='Testimonial'>
+                    <p className='text-left'>Over the years, I&apos;ve built lasting relationships based on trust and quality. Here&apos;s what our clients have to say about us.</p>
+                </SectionTitle>
 
-                <Carousel responsive={responsive} draggable={true} showDots={true} ssr={true} infinite={true}>
+                <Carousel responsive={responsive} draggable={true} showDots={true} ssr={true} infinite={true} className='py-10'>
                     {testimonials.map((testimonial, index) => (
                         <div key={index} className="px-4">
-                            <Card isHoverable className="p-6 h-full">
+                            <Card isHoverable className="p-4 md:p-6 h-full">
                                 <CardBody>
                                     <div className="flex justify-center mb-4">
                                         <Avatar
-                                            src={testimonial.image}
                                             size="lg"
+                                            src={testimonial.image}
                                             className="border-4 border-gray-200 rounded-full"
                                         />
                                     </div>

@@ -39,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={false}>
       <body className={`${geistSans.variable} ${geistMono.variable} ${roboto_slab.variable} ${open_sans.variable} antialiased`}>
         <Provider>
           <MainLayout>

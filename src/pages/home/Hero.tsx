@@ -28,7 +28,7 @@ export const Hero = () => {
                         </MyLinkHover>
                     </div>
                 </div>
-                <div className='flex justify-end'>
+                <div className='flex justify-center md:justify-end mt-10 md:mt-0'>
                     <div className=''>
                         <div className='relative z-[2]'>
                             <div className=''>

@@ -11,12 +11,11 @@ import { useUserRegistration } from '@/src/hooks/auth.hooks'
 import { registerValidation } from '@/src/validation/registerValidation'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Button } from "@nextui-org/react"
-import { redirect } from "next/navigation"
 import { useState } from "react"
 import { FieldValues, SubmitHandler } from "react-hook-form"
 
 const Registration = () => {
-    const { mutate, isPending, isSuccess } = useUserRegistration();
+    const { mutate, isPending } = useUserRegistration();
     const [image, setImage] = useState()
 
     const handleSubmit: SubmitHandler<FieldValues> = (data) => {
@@ -24,8 +23,6 @@ const Registration = () => {
             const formData = new FormData();
             const allData = { ...data }
             formData.append("data", JSON.stringify(allData))
-
-
             formData.append("image", image)
             mutate(formData)
         }
@@ -34,9 +31,7 @@ const Registration = () => {
     if (isPending) {
         return <LoadingBlur />
     }
-    if (!isPending && isSuccess) {
-        redirect("/")
-    }
+
     return (
         <Container classname="py-20">
             <div className="max-w-[650px] border mx-auto p-2 md:p-4 shadow rounded-lg bg-white">

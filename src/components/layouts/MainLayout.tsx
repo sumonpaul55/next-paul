@@ -1,6 +1,6 @@
 "use client";
 import React, { ReactNode, useState } from "react";
-import { FaBars, FaFacebookF, FaGithub, FaInstagram, FaTimes, FaUserCircle } from "react-icons/fa";
+import { FaBars, FaFacebookF, FaGithub, FaInstagram, FaTimes } from "react-icons/fa";
 import { menuBar } from "./menuBar";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -9,7 +9,8 @@ import { Divider, } from "@nextui-org/react";
 import { Tmenu } from "@/src/types";
 import { useUser } from "@/src/context/user.provider";
 import LoadingSpinner from "../shared/LoadingSpinner";
-
+import me from "../../../public/img/paul.png"
+import Image from "next/image"
 const MainLayout = ({ children }: { children: ReactNode }) => {
     const { user, isloading } = useUser()
     const pathname = usePathname()
@@ -42,11 +43,12 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
                             </button>
                         </div>
                     }
-                    {/* Profile Info */}
-                    <div className=" space-y-6">
-                        <div className="text-center space-x-4">
-                            <FaUserCircle size={50} className="text-gray-400 mx-auto" />
 
+                    {/* Profile Info */}
+                    <div className="space-y-6">
+                        <div className="text-center space-x-4">
+                            {/* <FaUserCircle size={50} className="text-gray-400 mx-auto" /> */}
+                            <Image src={me} alt="Sumon Paul" height={300} width={300} className="text-gray-400 size-20 mx-auto" />
                             <div className="mb">
                                 <h2 className="text-lg font-semibold md:text-2xl font-sans"><Link href={`/`}>Sumon Paul</Link></h2>
                                 <p className="text-sm text-gray-500">Web Developer</p>
@@ -74,10 +76,13 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
                     </div>
                     <div>
                         {
-                            !isloading && user ? <h3 className="w-full bg-gray-200 py-1 md:text-lg px-3 rounded-lg">{user?.email}</h3> :
-                                <Link href={`/login`} className="w-full py-1 rounded-lg text-center block bg-primary text-white md:text-lg">Login</Link>
+                            isloading ? <LoadingSpinner /> :
+                                !isloading && user ? <div className="flex gap-2 bg-gray-200 p-1 rounded-lg">
+                                    <h3 className="w-full py-1 md:text-lg px-3 rounded-lg flex-1">{user?.email}</h3>
+                                    <Image src={`${user?.profilePhoto}`} alt={`${user?.name}`} width={100} height={100} className="size-10 rounded-full" />
+                                </div> :
+                                    <Link href={`/login`} className="w-full py-1 rounded-lg text-center block bg-primary text-white md:text-lg">Login</Link>
                         }
-                        <Link href={`/registration`}>dfdsfsdf</Link>
                     </div>
                 </div>
 

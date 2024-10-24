@@ -11,8 +11,8 @@ export default function Home() {
     <main>
       <Hero />
       <div className="border-t border-baseGray border-opacity-60"></div>
-      <WhatIDo />
       <EducationSection />
+      <WhatIDo />
       {/* <ExperienceSection /> */}
       <TestimonialSlider />
     </main>
