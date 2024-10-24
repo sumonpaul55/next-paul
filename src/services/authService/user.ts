@@ -24,9 +24,9 @@ export const registerUser = async (userData: FieldValues) => {
 export const loginUser = async (userData: FieldValues) => {
   try {
     const { data } = await myInstance.post("/auth/login", userData);
-    if (data.success) {
+    console.log("login data", data);
+    if (data?.data?.accessToken) {
       cookies().set("accessToken", data?.data?.accessToken);
-      // cookies().set("refreshToken", data?.data?.refreshToken);
     }
     return data;
   } catch (error: any) {
@@ -48,7 +48,6 @@ export const getCurrentUser = async () => {
       profilePhoto: decodedToken?.profilePhoto,
     };
   }
-
   return decodedToken;
 };
 
