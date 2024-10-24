@@ -1,5 +1,5 @@
 import Container from "@/src/components/Container"
-import AllBlogs from "@/src/pages/blogs/allBlogs"
+import AllBlogs from "@/src/Cpages/blogs/allBlogs"
 
 
 const page = () => {

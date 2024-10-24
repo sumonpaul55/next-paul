@@ -1,9 +1,9 @@
-import EducationSection from "@/src/pages/home/Education";
+import EducationSection from "@/src/Cpages/home/Education";
 // import ExperienceSection from "@/src/pages/home/Experience";
-import { Hero } from "@/src/pages/home/Hero";
-import TestimonialSlider from "@/src/pages/home/Testimonial";
-import WhatIDo from "@/src/pages/home/WhatIDo";
-import PostSection from "../pages/home/PostSection";
+import { Hero } from "@/src/Cpages/home/Hero";
+import TestimonialSlider from "@/src/Cpages/home/Testimonial";
+import WhatIDo from "@/src/Cpages/home/WhatIDo";
+import PostSection from "../Cpages/home/PostSection";
 
 
 
