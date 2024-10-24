@@ -21,6 +21,6 @@ export const menuBar = [
   },
   {
     name: "Blog",
-    url: "/blog",
+    url: "/post",
   },
 ];

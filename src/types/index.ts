@@ -34,3 +34,26 @@ export type TUser = {
   updatedAt?: string;
   __v?: number;
 };
+
+export type TPost = {
+  _id: string;
+  title: string;
+  post: string;
+  userId: UserId;
+  category: string;
+  createdAt: string;
+  updatedAt: string;
+  __v: number;
+};
+
+export interface UserId {
+  _id: string;
+  name: string;
+  email: string;
+  phone: string;
+  address: string;
+  role: string;
+  password: string;
+  profilePhoto: string;
+  __v: number;
+}

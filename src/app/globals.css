@@ -35,3 +35,6 @@
   background-repeat: repeat;
   background-attachment: fixed;
   }
+  .jodit-wysiwyg{
+    height: 300px !important;
+  }

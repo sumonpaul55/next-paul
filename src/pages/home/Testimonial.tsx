@@ -1,4 +1,5 @@
 "use client"
+import Container from '@/src/components/Container';
 import SectionTitle from '@/src/components/shared/SectionTitle';
 // components/TestimonialSlider.tsx
 import { Card, Avatar, CardBody } from '@nextui-org/react';
@@ -54,34 +55,32 @@ const TestimonialSlider = () => {
     };
 
     return (
-        <section className="py-12 bg-gray-50">
-            <div className="container mx-auto md:px-4 text-center">
-                <SectionTitle title='Testimonial'>
-                    <p className='text-left'>Over the years, I&apos;ve built lasting relationships based on trust and quality. Here&apos;s what our clients have to say about us.</p>
-                </SectionTitle>
+        <Container classname='py-12'>
+            <SectionTitle title='Testimonial'>
+                <p className='text-left'>Over the years, I&apos;ve built lasting relationships based on trust and quality. Here&apos;s what our clients have to say about us.</p>
+            </SectionTitle>
 
-                <Carousel responsive={responsive} draggable={true} showDots={true} ssr={true} infinite={true} className='py-10'>
-                    {testimonials.map((testimonial, index) => (
-                        <div key={index} className="px-4">
-                            <Card isHoverable className="p-4 md:p-6 h-full">
-                                <CardBody>
-                                    <div className="flex justify-center mb-4">
-                                        <Avatar
-                                            size="lg"
-                                            src={testimonial.image}
-                                            className="border-4 border-gray-200 rounded-full"
-                                        />
-                                    </div>
-                                    <h3 className="font-semibold text-lg">{testimonial.name}</h3>
-                                    <p className="text-sm text-gray-500">{testimonial.role}</p>
-                                    <p className="mt-4 text-gray-700">{testimonial.feedback}</p>
-                                </CardBody>
-                            </Card>
-                        </div>
-                    ))}
-                </Carousel>
-            </div>
-        </section>
+            <Carousel responsive={responsive} draggable={true} showDots={true} ssr={true} infinite={true} className='py-10'>
+                {testimonials.map((testimonial, index) => (
+                    <div key={index} className="px-4 h-full" >
+                        <Card isHoverable className="p-4 md:p-6 h-full">
+                            <CardBody className='h-full'>
+                                <div className="flex justify-center mb-4">
+                                    <Avatar
+                                        size="lg"
+                                        src={testimonial.image}
+                                        className="border-4 border-gray-200 rounded-full"
+                                    />
+                                </div>
+                                <h3 className="font-semibold text-lg">{testimonial.name}</h3>
+                                <p className="text-sm text-gray-500">{testimonial.role}</p>
+                                <p className="mt-4 text-gray-700">{testimonial.feedback}</p>
+                            </CardBody>
+                        </Card>
+                    </div>
+                ))}
+            </Carousel>
+        </Container>
     );
 };
 

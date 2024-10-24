@@ -6,7 +6,7 @@ import { getCurrentUser } from "./services/authService/user";
 
 const Authroutes = ["/login", "/registration"];
 
-const ProtectedRoute = ["/dashboard"];
+const ProtectedRoute = ["/dashboard", "/createPost"];
 
 // const roleBaseRoutes = {
 //   // using regex for all profile related path can be accessable for user
@@ -47,5 +47,5 @@ export async function middleware(request: NextRequest) {
 }
 // See "Matching Paths" below to learn more
 export const config = {
-  matcher: ["/dashboard", "/admin/:page*", "/user", "/login", "/profile", "/news-feed", "/registration", "/user/:page*"],
+  matcher: ["/dashboard", "/admin/:page*", "/user", "/login", "/profile", "/createPost", "/registration", "/user/:page*"],
 };

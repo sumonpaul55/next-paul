@@ -11,6 +11,7 @@ import { useUser } from "@/src/context/user.provider";
 import LoadingSpinner from "../shared/LoadingSpinner";
 import me from "../../../public/img/paul.png"
 import Image from "next/image"
+import { logout } from "@/src/services/authService/user";
 const MainLayout = ({ children }: { children: ReactNode }) => {
     const { user, isloading } = useUser()
     const pathname = usePathname()
@@ -76,12 +77,13 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
                     </div>
                     <div>
                         {
-                            isloading ? <LoadingSpinner /> :
-                                !isloading && user ? <div className="flex gap-2 bg-gray-200 p-1 rounded-lg">
-                                    <h3 className="w-full py-1 md:text-lg px-3 rounded-lg flex-1">{user?.email}</h3>
-                                    <Image src={`${user?.profilePhoto}`} alt={`${user?.name}`} width={100} height={100} className="size-10 rounded-full" />
-                                </div> :
-                                    <Link href={`/login`} className="w-full py-1 rounded-lg text-center block bg-primary text-white md:text-lg">Login</Link>
+                            !isloading && user ? <div className="flex gap-1 p-1 rounded-lg bg-gray-200">
+                                <h3 className="w-full py-1 md:text-lg px-3 rounded-lg">{user?.email}</h3>
+                                {/* <Image src={`${user?.profilePhoto}`} alt={`${user?.name}`} width={100} height={100} className="size-10 rounded-full" /> */}
+                                <button onClick={() => logout()} className="bg-transparent border border-primary w-full hover:bg-gray-300 rounded-md py-1">Logout</button>
+                            </div> :
+
+                                <Link href={`/login`} className="w-full py-1 rounded-lg text-center block bg-primary text-white md:text-lg">Login</Link>
                         }
                     </div>
                 </div>

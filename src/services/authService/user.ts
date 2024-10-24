@@ -24,7 +24,6 @@ export const registerUser = async (userData: FieldValues) => {
 export const loginUser = async (userData: FieldValues) => {
   try {
     const { data } = await myInstance.post("/auth/login", userData);
-    console.log("login data", data);
     if (data?.data?.accessToken) {
       cookies().set("accessToken", data?.data?.accessToken);
     }

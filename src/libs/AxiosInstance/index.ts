@@ -1,7 +1,8 @@
 import axios from "axios";
 import { cookies } from "next/headers";
+import type { AxiosInstance } from "axios";
 
-const myInstance = axios.create({
+const myInstance: AxiosInstance = axios.create({
   baseURL: "http://localhost:5000/api",
 });
 // Add a request interceptor
