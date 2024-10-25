@@ -1,12 +1,11 @@
 import LoadingDoor from "@/src/components/shared/LoadinDoor"
 
-const ContactPage = () => {
+const page = () => {
     return (
         <div>
             <LoadingDoor />
-            ContactPage
         </div>
     )
 }
 
-export default ContactPage
+export default page

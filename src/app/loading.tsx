@@ -1,46 +1,35 @@
-// components/LoadingScreen.tsx
-"use client"
+// components/LoadingSpinner.tsx
+"use client"; // Ensure it's a client-side component
+
 import { motion } from "framer-motion";
-import { Dispatch, SetStateAction, useEffect } from "react";
+// import { Spinner } from "@nextui-org/react"; // Optional, from NextUI for extra styling
 
-interface LoadingScreenProps {
-    setLoading: Dispatch<SetStateAction<boolean>>;
-}
-
-const LoadingScreen: React.FC<LoadingScreenProps> = ({ setLoading }) => {
-    useEffect(() => {
-        const timeout = setTimeout(() => {
-            setLoading(false);
-        }, 2000); // Set duration for loading screen
-        return () => clearTimeout(timeout);
-    }, [setLoading]);
-
-    const doorVariants = {
-        hidden: { width: "50%" },
-        open: {
-            width: "0%",
-            transition: { duration: 1.5, ease: "easeInOut" },
+const Loadingpage = () => {
+    // Framer Motion spinner animation
+    const spinnerVariants = {
+        rotate: {
+            rotate: [0, 360],
+            transition: {
+                repeat: Infinity,
+                ease: "linear",
+                duration: 1.5,
+            },
         },
     };
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-white">
-            {/* Left Door */}
+        <div className="flex h-full items-center justify-center">
+            {/* Optional NextUI Spinner */}
+            {/* <Spinner size="lg" className="text-primary" /> */}
+
+            {/* Framer Motion animated circle (for custom spinner) */}
             <motion.div
-                className="bg-gray-800 h-full left-0 top-0 fixed"
-                variants={doorVariants}
-                initial="hidden"
-                animate="open"
-            />
-            {/* Right Door */}
-            <motion.div
-                className="bg-gray-800 h-full right-0 top-0 fixed"
-                variants={doorVariants}
-                initial="hidden"
-                animate="open"
+                className="border-t-4 border-b-4 border-primary rounded-full w-10 h-10"
+                variants={spinnerVariants}
+                animate="rotate"
             />
         </div>
     );
 };
 
-export default LoadingScreen;
+export default Loadingpage;

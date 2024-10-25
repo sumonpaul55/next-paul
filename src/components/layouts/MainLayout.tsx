@@ -68,7 +68,7 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
                                     if (items?.url === "/dashboard" && user?.role !== "ADMIN") {
                                         return
                                     }
-                                    return <Link key={idx} href={`${items?.url}`} className={`cursor-pointer bg-opacity-60 p-2 rounded font-semibold font-sans border hover:border-gray-300 hover:shadow ${pathname === items.url ? "bg-primary-600 text-white" : ""}`}>
+                                    return <Link key={idx} href={`${items?.url}`} onClick={() => setIsSidebarOpen(!isSidebarOpen)} className={`cursor-pointer bg-opacity-60 p-2 rounded font-semibold font-sans border hover:border-gray-300 hover:shadow ${pathname === items.url ? "bg-primary-600 text-white" : ""}`}>
                                         {items.name}
                                     </Link>
                                 })

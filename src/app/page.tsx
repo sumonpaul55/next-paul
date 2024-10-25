@@ -4,12 +4,14 @@ import { Hero } from "@/src/Cpages/home/Hero";
 import TestimonialSlider from "@/src/Cpages/home/Testimonial";
 import WhatIDo from "@/src/Cpages/home/WhatIDo";
 import PostSection from "../Cpages/home/PostSection";
+import LoadingDoor from "../components/shared/LoadinDoor";
 
 
 
 export default function Home() {
   return (
     <main>
+      <LoadingDoor />
       <Hero />
       <div className="border-t border-baseGray border-opacity-60"></div>
       <EducationSection />

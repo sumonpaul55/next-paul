@@ -38,3 +38,11 @@
   .jodit-wysiwyg{
     height: 300px !important;
   }
+.animated-text{
+  font-size: 3rem;
+}
+  @media screen and (max-width: 600px){
+.animated-text{
+  font-size: 30px;
+}
+  }

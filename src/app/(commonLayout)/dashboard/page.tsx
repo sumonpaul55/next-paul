@@ -1,5 +1,6 @@
 
 import Container from '@/src/components/Container'
+import LoadingDoor from '@/src/components/shared/LoadinDoor'
 import AllBlogs from '@/src/Cpages/blogs/allBlogs'
 import Link from 'next/link'
 
@@ -7,6 +8,7 @@ const page = () => {
 
     return (
         <main>
+            <LoadingDoor />
             <Container classname='py-6'>
                 <div className='bg-gray-100 px-3'>
                     <div className='py-4 flex justify-between'>
