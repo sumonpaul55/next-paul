@@ -57,3 +57,13 @@ export interface UserId {
   profilePhoto: string;
   __v: number;
 }
+
+export type TProjects = {
+  _id: string;
+  name: string;
+  technology: string;
+  overview: string; // HTML string content
+  image: string;
+  liveLink: string;
+  __v: number;
+};

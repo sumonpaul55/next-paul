@@ -30,7 +30,7 @@ export const Hero = () => {
                 </div>
                 <div className='flex justify-center md:justify-end mt-10 md:mt-0'>
                     <div className=''>
-                        <div className='relative z-[2] mx-3 md:mx-0'>
+                        <div className='relative z-[2] mx-5 md:mx-0'>
                             <div className=''>
                                 <Image src={img} alt='Sumon Paul' height={500} width={400} className='lg:max-w-[350px]' />
                             </div>

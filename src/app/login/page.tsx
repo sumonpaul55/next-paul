@@ -45,7 +45,7 @@ const LoginPage = () => {
         <>
             <Container classname="py-20">
                 <div className='flex items-center justify-center w-full'>
-                    <div className='md:w-[500px] mx-auto p-4 md:p-7 border border-gray-800 rounded-2xl shadow'>
+                    <div className='md:w-[500px] w-full mx-auto p-4 md:p-7 border border-gray-300 rounded-2xl shadow-md'>
                         <h2 className="mb-10 text-center text-xl md:text-2xl font-semibold font-roboto_slab">Login</h2>
                         <MyForm onSubmit={onSubmit} resolver={zodResolver(loginValidationSchema)}>
                             <div className="flex flex-col w-full flex-wrap md:flex-nowrap gap-4">

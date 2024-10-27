@@ -51,7 +51,7 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
                             {/* <FaUserCircle size={50} className="text-gray-400 mx-auto" /> */}
                             <Image src={me} alt="Sumon Paul" height={300} width={300} className="text-gray-400 size-20 mx-auto" />
                             <div className="mb">
-                                <h2 className="text-lg font-semibold md:text-2xl font-sans"><Link href={`/`}>Sumon Paul</Link></h2>
+                                <h2 className="text-lg font-semibold md:text-2xl font-sans"><Link href={`/`} onClick={() => setIsSidebarOpen(!isSidebarOpen)}>Sumon Paul</Link></h2>
                                 <p className="text-sm text-gray-500">Web Developer</p>
                             </div>
                             <div className="flex justify-evenly w-full mt-4">
@@ -82,8 +82,7 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
                                 {/* <Image src={`${user?.profilePhoto}`} alt={`${user?.name}`} width={100} height={100} className="size-10 rounded-full" /> */}
                                 <button onClick={() => logout()} className="bg-transparent border border-primary w-full hover:bg-gray-300 rounded-md py-1">Logout</button>
                             </div> :
-
-                                <Link href={`/login`} className="w-full py-1 rounded-lg text-center block bg-primary text-white md:text-lg">Login</Link>
+                                <Link href={`/login`} onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="w-full py-1 rounded-lg text-center block bg-primary text-white md:text-lg">Login</Link>
                         }
                     </div>
                 </div>

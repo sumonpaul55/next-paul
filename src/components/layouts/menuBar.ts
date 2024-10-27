@@ -4,8 +4,8 @@ export const menuBar = [
     url: "/dashboard",
   },
   {
-    name: "About Me",
-    url: "/about",
+    name: "Home",
+    url: "/",
   },
   {
     name: "Contact",

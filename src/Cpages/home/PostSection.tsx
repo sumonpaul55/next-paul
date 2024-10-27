@@ -8,7 +8,6 @@ import React from 'react'
 
 const PostSection = () => {
     const { data } = useGetpost()
-    console.log(data)
     return (
         <Container classname='bg-gray-100 py-20'>
             <div>

@@ -5,6 +5,7 @@ import TestimonialSlider from "@/src/Cpages/home/Testimonial";
 import WhatIDo from "@/src/Cpages/home/WhatIDo";
 import PostSection from "../Cpages/home/PostSection";
 import LoadingDoor from "../components/shared/LoadinDoor";
+import ProjectsSection from "../Cpages/home/ProjectsSection";
 
 
 
@@ -18,6 +19,8 @@ export default function Home() {
       <WhatIDo />
       <PostSection />
       {/* <ExperienceSection /> */}
+
+      <ProjectsSection />
       <TestimonialSlider />
     </main>
   );

@@ -7,10 +7,11 @@ import { useFormContext } from 'react-hook-form';
 
 interface IINputs extends TINput {
     defaultValue?: string;
-    description?: string
+    description?: string;
+    placeholder?: string
 }
 
-const MyInput = ({ variant = "bordered", label, className, size = "md", required = true, type = "text", name, defaultValue, description }: IINputs) => {
+const MyInput = ({ variant = "bordered", label, className, size = "md", required = true, type = "text", name, defaultValue, description, placeholder }: IINputs) => {
     const { register, formState: { errors } } = useFormContext()
 
     return (
@@ -22,6 +23,7 @@ const MyInput = ({ variant = "bordered", label, className, size = "md", required
             description={description}
             className={className}
             variant={variant}
+            placeholder={placeholder}
             size={size}
             isRequired={required}
             isInvalid={!!errors[name]}

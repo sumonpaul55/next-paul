@@ -6,7 +6,9 @@ import { getCurrentUser } from "./services/authService/user";
 
 const Authroutes = ["/login", "/registration"];
 
-const ProtectedRoute = ["/dashboard", "/createPost"];
+const ProtectedRoute = [""];
+
+const dashBoardRoute = ["/dashboard", "/dashboard/skills", "/dashboard/post", "/dashboard/projects", "/dashboard/skills/add-skills"];
 
 // const roleBaseRoutes = {
 //   // using regex for all profile related path can be accessable for user
@@ -43,9 +45,25 @@ export async function middleware(request: NextRequest) {
   //     return NextResponse.next();
   //   }
   // }
+  if (dashBoardRoute.includes(pathname)) {
+    if (user?.role === "ADMIN") {
+      return NextResponse.next();
+    }
+  }
   return NextResponse.redirect(new URL("/", request.url));
 }
 // See "Matching Paths" below to learn more
 export const config = {
-  matcher: ["/dashboard", "/admin/:page*", "/user", "/login", "/profile", "/createPost", "/registration", "/user/:page*"],
+  matcher: [
+    "/dashboard",
+    "/dashboard/skills",
+    "/dashboard/post",
+    "/dashboard/projects",
+    "/user",
+    "/login",
+    "/profile",
+    "/createPost",
+    "/registration",
+    "/dashboard/skills/add-skills",
+  ],
 };
