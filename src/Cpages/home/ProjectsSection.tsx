@@ -9,7 +9,7 @@ import React from 'react'
 
 const ProjectsSection = () => {
     const { data, isLoading } = useGetProject();
-    console.log(data?.data)
+    // console.log(data?.data)
     return (
         <Container classname='bg-gray-100 py-20'>
             <div>

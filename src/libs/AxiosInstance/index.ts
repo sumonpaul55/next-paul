@@ -3,8 +3,8 @@ import { cookies } from "next/headers";
 import type { AxiosInstance } from "axios";
 
 const myInstance: AxiosInstance = axios.create({
-  baseURL: "http://localhost:5000/api",
-  // baseURL: "https://portfolio-server-psi-taupe.vercel.app/api",
+  // baseURL: "http://localhost:5000/api",
+  baseURL: "https://portfolio-server-psi-taupe.vercel.app/api",
 });
 // Add a request interceptor
 myInstance.interceptors.request.use(

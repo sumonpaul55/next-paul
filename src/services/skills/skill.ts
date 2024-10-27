@@ -9,7 +9,7 @@ export const addSkills = async (skillsData: FieldValues) => {
     const { data } = await myInstance.post("/skills", skillsData);
     return data;
   } catch (error: any) {
-    console.log(error);
+    // console.log(error);
     throw new Error(error);
   }
 };
@@ -19,7 +19,7 @@ export const getSkills = async () => {
     const { data } = await myInstance.get("/skills");
     return data;
   } catch (error: any) {
-    console.log(error);
+    // console.log(error);
     throw new Error(error);
   }
 };
