@@ -3,10 +3,12 @@ import LoadingDoor from "@/src/components/shared/LoadinDoor"
 
 import SectionTitle from "@/src/components/shared/SectionTitle"
 import SkillsCard from "@/src/components/shared/SkillsCard"
-import { getSkills } from "@/src/services/skills/skill"
+// import { getSkills } from "@/src/services/skills/skill"
 
 const SkillsPage = async () => {
-    const { data } = await getSkills();
+    // const { data } = await getSkills();
+    const res = await fetch("https://portfolio-server-psi-taupe.vercel.app/api/skills");
+    const data = await res.json()
 
     return (
         <>
@@ -16,7 +18,7 @@ const SkillsPage = async () => {
                     <SectionTitle title="What I Do" />
                     <div className='grid grid-cols-1 sm:grid-cols-2 gap-5 lg:grid-cols-3 xl:grid-cols-4'>
                         {
-                            data?.map((item: { _id: string; name: string; description: string; image: string }) => (
+                            data?.data?.map((item: { _id: string; name: string; description: string; image: string }) => (
                                 <SkillsCard key={item._id} name={item?.name} description={item?.description} image={item?.image} />
                             ))
                         }
