@@ -9,7 +9,7 @@ const page = async ({ params }: { params: any }) => {
     const data = await getPostById(params.postId)
 
     return (
-        <Container classname="py-20">
+        <Container classname="py-10">
             <div className="max-w-[900] mx-auto">
                 <PostDetails postData={data?.data} />
             </div>

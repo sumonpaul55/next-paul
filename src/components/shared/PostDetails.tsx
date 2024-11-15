@@ -5,7 +5,6 @@ import moment from "moment";
 import Image from "next/image";
 import { TPost } from "@/src/types";
 import { getImageFromHtml } from "@/src/utils/getImageFromHtml";
-import Link from "next/link";
 
 const PostDetails = ({ postData }: { postData: TPost }) => {
     const { title, post, userId, category, createdAt } = postData;
@@ -13,10 +12,10 @@ const PostDetails = ({ postData }: { postData: TPost }) => {
     const postImg = getImageFromHtml(post)
 
     return (
-        <div className="overflow-hidden border bg-white rounded-md h-full pb-4">
+        <div className="overflow-hidden border bg-white rounded-md h-full pb-4 max-w-[800px] mx-auto">
             {/* Image */}
             <Image
-                className="w-full h-48 object-cover"
+                className="w-full h-40 md:h-52 object-cover"
                 src={postImg!} // Replace with dynamic post image if available
                 alt="Post Image"
                 height={300}
@@ -24,11 +23,11 @@ const PostDetails = ({ postData }: { postData: TPost }) => {
             />
 
             {/* Category Badge */}
-            <div className="px-6 py-2 flex justify-between items-center">
+            <div className="px3 md:px-6 py-2 flex justify-between items-center">
                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold mr-2">
                     {category}
                 </span>
-                <Link className="bg-primary text-white p-1 rounded-md" href={`/post/post-details`}>Read more...</Link>
+                {/* <Link className="bg-primary text-white p-1 rounded-md" href={`/post/post-details`}>Read more...</Link> */}
             </div>
 
             {/* Post Content */}

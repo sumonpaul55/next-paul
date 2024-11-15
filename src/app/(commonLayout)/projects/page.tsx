@@ -1,11 +1,13 @@
 import LoadingDoor from "@/src/components/shared/LoadinDoor"
+import AllProject from "@/src/Cpages/projects/AllProject"
 
-const page = () => {
+const ProjectPage = () => {
     return (
         <div>
             <LoadingDoor />
+            <AllProject />
         </div>
     )
 }
 
-export default page
+export default ProjectPage

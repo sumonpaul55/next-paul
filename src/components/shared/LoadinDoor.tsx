@@ -10,7 +10,7 @@ const LoadingDoor = () => {
         hidden: { width: "50%" },
         open: {
             width: "0%",
-            transition: { duration: 1.5, ease: "easeInOut" },
+            transition: { duration: 1.1, ease: "easeInOut" },
         },
     };
 

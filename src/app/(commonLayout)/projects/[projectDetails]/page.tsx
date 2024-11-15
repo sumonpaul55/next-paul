@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import ProjectDetails from '@/src/Cpages/ProjectDetails';
+import ProjectDetails from '@/src/Cpages/projects/ProjectDetails';
 import { getProjectById } from '@/src/services/projectService';
 import React from 'react'
 

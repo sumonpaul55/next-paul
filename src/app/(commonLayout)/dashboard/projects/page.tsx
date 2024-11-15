@@ -1,4 +1,5 @@
 import LoadingDoor from "@/src/components/shared/LoadinDoor"
+import AllProject from "@/src/Cpages/projects/AllProject"
 import Link from "next/link"
 
 const ProjectsPage = () => {
@@ -14,7 +15,7 @@ const ProjectsPage = () => {
                 </div>
                 <div className='bg-white'>
                     <h1 className='p-2 text-lg md:text-xl font-semibold'>All Projects</h1>
-                    {/* <AllBlogs /> */}
+                    <AllProject />
                 </div>
             </div>
         </>

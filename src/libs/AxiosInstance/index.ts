@@ -1,8 +1,8 @@
 import axios from "axios";
 import { cookies } from "next/headers";
-import type { AxiosInstance } from "axios";
+// import type { AxiosInstance } from "axios";
 
-const myInstance: AxiosInstance = axios.create({
+const myInstance = axios.create({
   // baseURL: "http://localhost:5000/api",
   baseURL: "https://portfolio-server-psi-taupe.vercel.app/api",
 });

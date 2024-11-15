@@ -77,10 +77,10 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
                     </div>
                     <div>
                         {
-                            !isloading && user ? <div className="flex gap-1 p-1 rounded-lg bg-gray-200">
-                                <h3 className="w-full py-1 md:text-lg px-3 rounded-lg">{user?.email}</h3>
+                            !isloading && user ? <div className="flex gap-1 justify-between p-1 rounded-lg bg-gray-200">
+                                <h3 className="w-[70%] py-1 md:text-lg px-3 rounded-lg">{user?.email}</h3>
                                 {/* <Image src={`${user?.profilePhoto}`} alt={`${user?.name}`} width={100} height={100} className="size-10 rounded-full" /> */}
-                                <button onClick={() => logout()} className="bg-transparent border border-primary w-full hover:bg-gray-300 rounded-md py-1">Logout</button>
+                                <button onClick={() => logout()} className="bg-transparent border bg-white border-primary px-2 hover:bg-gray-300 rounded-md py-1">Logout</button>
                             </div> :
                                 <Link href={`/login`} onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="w-full py-1 rounded-lg text-center block bg-primary text-white md:text-lg">Login</Link>
                         }

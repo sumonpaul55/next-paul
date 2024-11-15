@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { TProjects } from '../types';
+import { TProjects } from '@/src/types';
 
 const ProjectDetails = ({ project }: { project: TProjects }) => {
     const { name, technology, overview, image, liveLink } = project;

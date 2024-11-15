@@ -3,15 +3,16 @@ import LoadingDoor from "@/src/components/shared/LoadinDoor"
 import AllBlogs from "@/src/Cpages/blogs/allBlogs"
 
 
-const page = () => {
+const PostPage = () => {
     return (
         <>
             <LoadingDoor />
             <Container>
+
                 <AllBlogs />
             </Container>
         </>
     )
 }
 
-export default page
+export default PostPage

@@ -4,7 +4,7 @@ import img from "@/src/../public/img/paul.png"
 import Image from 'next/image'
 import AnimateText from './AnimateText'
 import Container from '@/src/components/Container'
-import MyLink, { MyLinkHover } from '@/src/components/MyLinks/MyLink'
+import MyLink, { } from '@/src/components/MyLinks/MyLink'
 export const Hero = () => {
     return (
         <Container classname='py-5 md:py-20'>
@@ -20,12 +20,13 @@ export const Hero = () => {
                         </p>
                     </div>
                     <div className='mt-10 flex gap-10 text-sm md:text-base'>
-                        <MyLink url='https://drive.google.com/file/d/1dlwy3VGj3ZyRw2T8RS5PAypqCFO3VIsg/view?usp=sharing' target="_blank" className="bg-primary text-white border p-2 rounded-md font-semibold font-sans hover:bg-white hover:text-primary hover:border border-primary duration-400">
+                        <MyLink url='https://drive.google.com/file/d/11l4dOaHbE7IgGLos7ppB7y3ExshaKYf1/view?usp=sharing' target="_blank" className="bg-primary text-white border p-2 rounded-md font-semibold font-sans hover:bg-white hover:text-primary hover:border border-primary duration-400">
                             View Resume
                         </MyLink>
-                        <MyLinkHover url='https://drive.usercontent.google.com/u/0/uc?id=1dlwy3VGj3ZyRw2T8RS5PAypqCFO3VIsg&export=download' className="" >
-                            Download Resume
-                        </MyLinkHover>
+                        <a href={`mern-end.pdf`} download target="_blank" className={`relative inline-block px-2 md:px-6 py-2 font-semibold text-primary border-1 border-primary rounded-lg overflow-hidden transition-colors duration-300 ease-in-out group hover:text-white`}>
+                            <span className="absolute inset-0 bg-primary transform translate-x-full transition-transform duration-500 ease-out group-hover:translate-x-0"></span>
+                            <span className="relative z-10">Downdload Resume</span>
+                        </a>
                     </div>
                 </div>
                 <div className='flex justify-center md:justify-end mt-10 md:mt-0'>

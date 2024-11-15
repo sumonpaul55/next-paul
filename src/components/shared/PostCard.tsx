@@ -13,11 +13,11 @@ const PostCard = ({ postData }: { postData: TPost }) => {
     const postImg = getImageFromHtml(post)
 
     return (
-        <div className="max-w-sm overflow-hidden shadow-2xl bg-white rounded-md h-full pb-4">
+        <div className="max-w-sm overflow-hidden shadow-xl rounded-md h-full pb-4">
             {/* Image */}
             <Image
                 className="w-full h-48 object-cover"
-                src={postImg!} // Replace with dynamic post image if available
+                src={`${postImg}`} // Replace with dynamic post image if available
                 alt="Post Image"
                 height={300}
                 width={400}
