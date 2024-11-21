@@ -23,8 +23,10 @@ const Contact = () => {
         // console.log(formData);
     };
 
+    console.log(formData)
+
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
+        <div className="flex flex-col items-center justify-center min-h-full bg-gray-100 p-4">
             <h1 className="text-4xl font-bold mb-6 text-center">Contact Me</h1>
             <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
                 <Input
