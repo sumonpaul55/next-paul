@@ -6,7 +6,7 @@ import myInstance from "../libs/AxiosInstance";
 export const addProject = async (addProject: FieldValues) => {
   try {
     const { data } = await myInstance.post("/project", addProject);
-    console.log(data);
+    // console.log(data);
     return data;
   } catch (error: any) {
     throw new Error(error);
