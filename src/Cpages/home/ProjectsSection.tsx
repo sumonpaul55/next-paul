@@ -16,10 +16,12 @@ const ProjectsSection = () => {
                 <SectionTitle title='Featured Projects'>
                     <p>Here is showing last 6 blogs from my all blogs you can see all of my blogs from the blogs page. If you want to read more blogs please click the blog route. Some of blog written by and some of blogs can be writen by random user</p>
                 </SectionTitle>
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
+                <div className='grid grid-cols-1 md:grid-cols-4 gap-5'>
                     {isLoading ? <LoadingSpinner /> :
                         data?.data?.slice(0, 6)?.map((items: any, idx: number) => (
-                            <ProjectCard key={idx} _id={items?._id} liveLink={items?.liveLink} name={items?.name} image={items?.image} technology={items?.technology} />
+                        <div key={idx} className='bg-white p-2 rounded-md'>
+                            <ProjectCard _id={items?._id} liveLink={items?.liveLink} name={items?.name} image={items?.image} technology={items?.technology} />
+                        </div>    
                         ))
                     }
                 </div>
