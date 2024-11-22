@@ -1,18 +1,16 @@
-import Container from "@/src/components/Container"
-import LoadingDoor from "@/src/components/shared/LoadinDoor"
-import AllBlogs from "@/src/Cpages/blogs/allBlogs"
-
+import Container from "@/src/components/Container";
+import LoadingDoor from "@/src/components/shared/LoadinDoor";
+import AllBlogs from "@/src/Cpages/blogs/allBlogs";
 
 const PostPage = () => {
-    return (
-        <>
-            <LoadingDoor />
-            <Container>
+  return (
+    <>
+      <LoadingDoor />
+      <Container>
+        <AllBlogs />
+      </Container>
+    </>
+  );
+};
 
-                <AllBlogs />
-            </Container>
-        </>
-    )
-}
-
-export default PostPage
+export default PostPage;

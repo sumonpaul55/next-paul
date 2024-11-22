@@ -8,8 +8,7 @@ const ProjectCard = ({ _id, liveLink, name, technology, image }: { _id: string; 
         <div className='group'>
             <motion.div
                 className="relative w-full h-[400px] shadow-lg overflow-hidden bg-cover bg-top hover:bg-bottom duration-1000"
-                style={{ backgroundImage: `url(${image})` }}
-            // whileHover={{ scale: 1.05 }}
+                style={{ backgroundImage: `url(${image})` }}// whileHover={{ scale: 1.05 }}
             >
 
                 <Link href={`/projects/${_id}`} className='bg-primary bg-opacity-80 p-2 w-[50%] absolute text-white -left-full group-hover:left-0 duration-500 bottom-0 hover:bg-blue-700'>

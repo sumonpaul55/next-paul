@@ -1,9 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 // /* eslint-disable @typescript-eslint/no-explicit-any */
 "use server";
-
 import myInstance from "@/src/libs/AxiosInstance";
-
 import { jwtDecode } from "jwt-decode";
 import { cookies } from "next/headers";
 import { FieldValues } from "react-hook-form";
@@ -27,6 +25,14 @@ export const loginUser = async (userData: FieldValues) => {
     if (data?.data?.accessToken) {
       cookies().set("accessToken", data?.data?.accessToken);
     }
+    return data;
+  } catch (error: any) {
+    throw new Error(error);
+  }
+};
+export const contactMe = async (formData: FieldValues) => {
+  try {
+    const { data } = await myInstance.post("/contact-me", formData);
     return data;
   } catch (error: any) {
     throw new Error(error);
