@@ -56,8 +56,7 @@ const ProjectDetails = ({ project }: { project: TProjects }) => {
                             href={liveLink}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-block px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
-                        >
+                            className="inline-block px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
                             Visit Live Project
                         </a>
                     </motion.div>

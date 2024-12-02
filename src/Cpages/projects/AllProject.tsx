@@ -16,7 +16,7 @@ const AllProject = () => {
            </SectionTitle>
             {
                 isLoading ? <LoadingSpinner /> :
-                    <div className='grid grid-cols-1 ms:grid-cols-2 md:grid-col-3 lg:grid-cols-4 gap-5 md:gap-10'>
+                    <div className='grid grid-cols-1 ms:grid-cols-2 md:grid-col-3 lg:grid-cols-4 gap-5 md:gap-7'>
                         {
                             data?.data?.map((item: TProjects, idx: number) => (
                                 <div key={idx} className='shadow p-2 rounded-md bg-white'>
