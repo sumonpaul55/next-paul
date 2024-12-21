@@ -6,7 +6,7 @@ import { Input, Textarea } from "@nextui-org/react";
 import { FieldValues, useForm } from "react-hook-form";
 
 const Contact = () => {
-    const {mutate}= useContactForm()
+  const { mutate } = useContactForm()
   const {
     register,
     handleSubmit,
@@ -14,11 +14,10 @@ const Contact = () => {
     reset,
   } = useForm();
 
-  const onSubmit = async(data: FieldValues) => {
+  const onSubmit = async (data: FieldValues) => {
     mutate(data);
     reset();
   };
-console.log("dkjfdklf",errors)
   return (
     <div className="flex flex-col items-center justify-center min-h-full bg-gray-100 p-4">
       <h1 className="text-4xl font-bold mb-6 text-center">Contact Me</h1>
@@ -33,7 +32,7 @@ console.log("dkjfdklf",errors)
             type="text"
             radius="sm"
             {...register("name", { required: "Name is required" })}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-primary focus:border-primary"/>
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-primary focus:border-primary" />
           {errors.name && <p className="text-red-500 text-sm mt-2">{errors.name.message as string}</p>}
         </div>
 
@@ -53,7 +52,7 @@ console.log("dkjfdklf",errors)
                 message: "Invalid email address",
               },
             })}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-primary focus:border-primary"/>
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-primary focus:border-primary" />
           {errors.email && <p className="text-red-500 text-sm mt-2">{errors.email.message as string}</p>}
         </div>
 

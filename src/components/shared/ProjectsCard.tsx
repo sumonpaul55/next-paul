@@ -18,7 +18,7 @@ const ProjectCard = ({ _id, liveLink, name, technology, image }: { _id: string; 
                     View Live
                 </Link>
             </motion.div>
-            
+
             <div className="inset-0 bg-black bg-opacity-30 flex items-end justify-between z-50">
                 {/* Project Info */}
                 <div className="text-left bg-gray-800 w-full px-3">
@@ -26,7 +26,6 @@ const ProjectCard = ({ _id, liveLink, name, technology, image }: { _id: string; 
                     <p className="text-gray-300">{technology}</p>
                 </div>
                 {/* Project Overview - Initially Hidden */}
-
             </div>
         </div>
     );
