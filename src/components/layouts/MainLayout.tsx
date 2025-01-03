@@ -35,7 +35,6 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
                 }
                 {/* Sidebar */}
                 <div className={`bg-gray-50 border-r-1 flex flex-col justify-between border-gray-200 w-[250px] sm:w-[350px] p-3 md:p-6 transition-transform transform fixed lg:static top-0 left-0 h-full lg:h-auto z-50 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0`}>
-
                     {
                         isSidebarOpen && <div className={`lg:hidden p-3 bg-gray-800 rounded-full size-11 flex justify-center items-center fixed top-2 bg-opacity-70 z-50 ${isSidebarOpen ? "right-2" : "left-2"}`}>
                             <button onClick={toggleSidebar}

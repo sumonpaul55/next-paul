@@ -15,7 +15,7 @@ const config: Config = {
         foreground: "var(--foreground)",
         baseGray: "#E9E7E8",
         TextHeading: "#030014",
-        primary: "#3b82f6",
+        primary: "#0040a8",
       },
       fontFamily: {
         sans: ["var(--geist-sans)"],
