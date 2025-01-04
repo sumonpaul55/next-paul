@@ -18,10 +18,10 @@ const ProjectsSection = () => {
                 </SectionTitle>
                 <div className='grid grid-cols-1 md:grid-cols-4 gap-5'>
                     {isLoading ? <LoadingSpinner /> :
-                        data?.data?.slice(0, 6)?.map((items: any, idx: number) => (
-                        <div key={idx} className='bg-white p-2 rounded-md'>
-                            <ProjectCard _id={items?._id} liveLink={items?.liveLink} name={items?.name} image={items?.image} technology={items?.technology} />
-                        </div>    
+                        data?.data?.reverse()?.slice(0, 8)?.map((items: any, idx: number) => (
+                            <div key={idx} className='bg-white p-2 rounded-md'>
+                                <ProjectCard _id={items?._id} liveLink={items?.liveLink} name={items?.name} image={items?.image} technology={items?.technology} />
+                            </div>
                         ))
                     }
                 </div>
