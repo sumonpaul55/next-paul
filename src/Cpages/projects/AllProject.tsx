@@ -11,12 +11,12 @@ const AllProject = () => {
     return (
         <div className='p-3 md:p-5 bg-gray-200 py-10'>
             {/* <LoadingDoor/> */}
-           <SectionTitle title='My Work'>
-            <p>I have worked at multiple time on varius project. All project are build using my existing skills set and few porject are worked with group and almost all are developed by me.</p>
-           </SectionTitle>
+            <SectionTitle title='My Work'>
+                <p>I have worked at multiple time on varius project. All project are build using my existing skills set and few porject are worked with group and almost all are developed by me.</p>
+            </SectionTitle>
             {
                 isLoading ? <LoadingSpinner /> :
-                    <div className='grid grid-cols-1 ms:grid-cols-2 md:grid-col-3 lg:grid-cols-4 gap-5 md:gap-7'>
+                    <div className='grid grid-cols-1 ms:grid-cols-2 md:grid-col-3 lg:grid-cols-4 gap-5'>
                         {
                             data?.data?.map((item: TProjects, idx: number) => (
                                 <div key={idx} className='shadow p-2 rounded-md bg-white'>
