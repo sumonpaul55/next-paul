@@ -3,46 +3,70 @@
 @tailwind utilities;
 
 
-.animateBg{
+.animateBg {
   animation-name: bganimation;
   animation-duration: 10s;
   animation-iteration-count: infinite;
-  
+
 }
 
 
 @keyframes bganimation {
-  0%{
+  0% {
     transform: rotate(0deg);
   }
-  25%{
+
+  25% {
     transform: rotate(-10deg);
   }
-  50%{
+
+  50% {
     transform: rotate(0deg);
   }
-  75%{
+
+  75% {
     transform: rotate(10deg);
   }
-  100%{
+
+  100% {
     transform: rotate(0);
   }
 }
 
-.educationSection{
-  background:linear-gradient( #ffffffd5, #ffffffd5), url("../../public/img/bgEdu.jpg");
+.educationSection {
+  background: linear-gradient(#ffffffd5, #ffffffd5), url("../../public/img/bgEdu.jpg");
   background-size: contain;
   background-repeat: repeat;
   background-attachment: fixed;
-  }
-  .jodit-wysiwyg{
-    height: 300px !important;
-  }
-.animated-text{
+}
+
+.jodit-wysiwyg {
+  height: 300px !important;
+}
+
+.animated-text {
   font-size: 3rem;
 }
-  @media screen and (max-width: 600px){
-.animated-text{
-  font-size: 30px;
-}
+
+@media screen and (max-width: 600px) {
+  .animated-text {
+    font-size: 30px;
   }
+}
+
+/* Apply the animation to the .animate-circle class */
+.animate-circle {
+  animation: rotate 2s linear infinite;
+  /* Continuous rotation */
+  transform-origin: center;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

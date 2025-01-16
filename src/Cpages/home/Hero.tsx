@@ -1,6 +1,6 @@
 
 import React from 'react'
-import img from "@/src/../public/img/paul.png"
+import img from "@/src/../public/img/herotech.png"
 import Image from 'next/image'
 import AnimateText from './AnimateText'
 import Container from '@/src/components/Container'
@@ -8,7 +8,7 @@ import MyLink, { } from '@/src/components/MyLinks/MyLink'
 export const Hero = () => {
     return (
         <Container classname='py-5 md:py-20'>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-5 py-10'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0 py-10'>
                 <div>
                     <h1 className='font-extrabold text-2xl sm:text-3xl font-open_sans'>I&apos;M,</h1>
                     <div className='flex items-center flex-wrap gap-2'>
@@ -31,11 +31,16 @@ export const Hero = () => {
                 </div>
                 <div className='flex justify-center md:justify-end mt-10 md:mt-0'>
                     <div className=''>
-                        <div className='relative z-[2] mx-5 md:mx-0'>
-                            <div className='hiddne md:block'>
-                                <Image src={img} alt='Sumon Paul' height={500} width={400} className='lg:max-w-[350px]' />
+                        <div className='mx-5 md:mx-0'>
+                            <div className='relative'>
+                                <Image src={img} alt='Sumon Paul' height={400} width={400} className='rounded-full size-[400px]' />
+                                <div className='absolute w-[50%] h-[50%] rounded-full border-4 top-1/4 left-1/4 animate-circle'>
+                                    <div className='bg-white size-5 rounded-full absolute top-1/4 right-0 translate-x-1/4'></div>
+                                    <div className='bg-white size-5 rounded-full absolute top-1/4 left-0 -translate-x-1/4'></div>
+                                    <div className='bg-white size-5 rounded-full absolute top-full left-1/2 -translate-y-1/2'></div>
+                                </div>
                             </div>
-                            <div className='bg-blue-500 animateBg absolute h-full w-full top-0 left-0 z-[-1]'></div>
+
                         </div>
                     </div>
                 </div>
