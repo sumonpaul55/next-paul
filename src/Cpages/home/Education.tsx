@@ -7,14 +7,14 @@ import SectionTitle from '@/src/components/shared/SectionTitle';
 import Container from '@/src/components/Container';
 const EducationSection: React.FC = () => {
     return (
-        <Container classname='pt-10 pb-20 educationSection font-sans'>
+        <Container classname='pt-10 pb-20 educationSection font-sans text-white'>
             {/* <h2 className="text-lg md:text-3xl lg:text-4xl font-bold text-center mb-12">Education</h2> */}
             <SectionTitle title="Education" className=''>
-                <p>All of my educational qualifiction</p>
+                <p className='text-paragraphText'>All of my educational qualifiction</p>
             </SectionTitle>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
                 {/* MBA Section */}
-                <Card className="" isHoverable>
+                <Card className="bg-slate-900">
                     <CardBody>
                         <div className='flex gap-4 mb-5 items-center'>
                             <div className='bg-gray-200 size-16 rounded-full flex justify-center items-center'>
@@ -31,8 +31,7 @@ const EducationSection: React.FC = () => {
                         </h3>
                     </CardBody>
                 </Card>
-
-                <Card className="" isHoverable>
+                <Card className="bg-slate-900">
                     <CardBody>
                         <div className='flex gap-4 mb-5 items-center'>
                             <div className='bg-gray-200 size-16 rounded-full flex justify-center items-center'>
@@ -52,7 +51,7 @@ const EducationSection: React.FC = () => {
                     </CardBody>
                 </Card>
                 {/* BBA Section */}
-                <Card className="" isHoverable>
+                <Card className="bg-slate-900">
                     <CardBody>
                         <div className='flex gap-4 mb-5 items-center'>
                             <div className='bg-gray-200 size-16 rounded-full flex justify-center items-center'>
@@ -70,9 +69,8 @@ const EducationSection: React.FC = () => {
                             I completed my HSC from Mymensingh Government College, where I first nurtured my interest in management and leadership, paving the way for my journey in business and technology. </h3>
                     </CardBody>
                 </Card>
-
                 {/* Developer Proficiency Section */}
-                <Card className="" isHoverable>
+                <Card className="bg-slate-900">
                     <CardBody>
                         <div className='flex gap-4 mb-5 items-center'>
                             <div className='bg-gray-200 size-16 rounded-full flex justify-center items-center'>

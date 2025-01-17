@@ -55,16 +55,16 @@ const TestimonialSlider = () => {
     };
 
     return (
-        <Container classname='py-12'>
-            <SectionTitle title='Testimonial'>
-                <p className='text-left'>Over the years, I&apos;ve built lasting relationships based on trust and quality. Here&apos;s what our clients have to say about us.</p>
+        <Container classname='py-12 bg-slate-900'>
+            <SectionTitle title='Testimonial' className='text-white'>
+                <p className='text-left text-paragraphText'>Over the years, I&apos;ve built lasting relationships based on trust and quality. Here&apos;s what our clients have to say about us.</p>
             </SectionTitle>
 
             <Carousel responsive={responsive} draggable={true} showDots={true} ssr={true} infinite={true} className='py-10'>
                 {testimonials.map((testimonial, index) => (
                     <div key={index} className="px-4 h-full" >
-                        <Card isHoverable className="p-4 md:p-6 h-full">
-                            <CardBody className='h-full'>
+                        <Card className="hover:bg-slate-900 hover:border border p-4 md:p-6 h-full bg-gray-800 text-white">
+                            <CardBody className='h-full text-white'>
                                 <div className="flex justify-center mb-4">
                                     <Avatar
                                         size="lg"
@@ -73,8 +73,8 @@ const TestimonialSlider = () => {
                                     />
                                 </div>
                                 <h3 className="font-semibold text-lg">{testimonial.name}</h3>
-                                <p className="text-sm text-gray-500">{testimonial.role}</p>
-                                <p className="mt-4 text-gray-700">{testimonial.feedback}</p>
+                                <p className="text-sm text-gray-100">{testimonial.role}</p>
+                                <p className="mt-4 text-paragraphText">{testimonial.feedback}</p>
                             </CardBody>
                         </Card>
                     </div>

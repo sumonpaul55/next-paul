@@ -10,9 +10,9 @@ const WhatIDo = () => {
     const { data, isLoading } = useGetSkills();
     return (
         <Container classname='py-20'>
-            <div>
+            <div className='text-white'>
                 <SectionTitle className='' title='What I do'>
-                    <p className='md:text-lg'>I have over 2 years of experience building responsive and engaging front-end applications, as well as 1+ year of experience working with the MERN (MongoDB, Express, React, Node.js) stack for full-stack development.
+                    <p className='md:text-lg text-paragraphText'>I have over 2 years of experience building responsive and engaging front-end applications, as well as 1+ year of experience working with the MERN (MongoDB, Express, React, Node.js) stack for full-stack development.
                     </p>
                 </SectionTitle>
                 <div className='grid grid-cols-1 sm:grid-cols-2 gap-5 lg:grid-cols-3 xl:grid-cols-4'>

@@ -11,17 +11,16 @@ import ProjectsSection from "../Cpages/home/ProjectsSection";
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-black">
       <LoadingDoor />
       <Hero />
-      <div className="border-t border-baseGray border-opacity-60"></div>
-      <EducationSection />
       <WhatIDo />
-      <PostSection />
+      <ProjectsSection />
+      <EducationSection />
       {/* <ExperienceSection /> */}
 
-      <ProjectsSection />
       <TestimonialSlider />
+      <PostSection />
     </main>
   );
 }

@@ -16,6 +16,7 @@ const config: Config = {
         baseGray: "#E9E7E8",
         TextHeading: "#030014",
         primary: "#0040a8",
+        paragraphText: "#cbd5e1"
       },
       fontFamily: {
         sans: ["var(--geist-sans)"],

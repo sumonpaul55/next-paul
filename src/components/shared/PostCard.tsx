@@ -13,7 +13,7 @@ const PostCard = ({ postData }: { postData: TPost }) => {
     const postImg = getImageFromHtml(post)
 
     return (
-        <div className="max-w-sm overflow-hidden shadow-xl rounded-md h-full pb-4">
+        <div className="overflow-hidden shadow-xl rounded-md h-full pb-4 bg-slate-700 text-white">
             {/* Image */}
             <Image
                 className="w-full h-48 object-cover"
@@ -25,10 +25,10 @@ const PostCard = ({ postData }: { postData: TPost }) => {
 
             {/* Category Badge */}
             <div className="px-6 py-2 flex justify-between items-center">
-                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold mr-2">
+                <span className="inline-block bg-gray-900 rounded-full px-3 py-1 text-sm font-semibold mr-2">
                     {category}
                 </span>
-                <Link className="bg-primary text-white p-1 rounded-md" href={`/post/${_id}`}>Read more...</Link>
+                <Link className="bg-primary-900 text-white p-1 rounded-md" href={`/post/${_id}`}>Read more...</Link>
             </div>
 
             {/* Post Content */}
@@ -51,11 +51,11 @@ const PostCard = ({ postData }: { postData: TPost }) => {
                         width={400}
                     />
                     <div>
-                        <p className="text-gray-900 font-bold">{userId?.name}</p>
-                        <p className="text-gray-600 text-sm">{userId?.email}</p>
+                        <p className="text-gray-200 font-bold">{userId?.name}</p>
+                        <p className="text-gray-100 text-sm">{userId?.email}</p>
                     </div>
                 </div>
-                <p className="text-gray-500 text-sm mt-2">
+                <p className="text-gray-300 text-sm mt-2">
                     Posted on {moment(createdAt).format("MMMM Do, YYYY")}
                 </p>
             </div>
