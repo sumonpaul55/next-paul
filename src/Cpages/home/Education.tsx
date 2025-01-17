@@ -26,7 +26,7 @@ const EducationSection: React.FC = () => {
                             </div>
                         </div>
                         <h3 className="mt-2">
-                            <strong className='md:text-lg uppercase'>national University</strong>  (Management) <br />
+                            <strong className='md:text-md uppercase'>national University</strong>  (Management) <br />
                             Currently pursuing my MBA, focusing on Business Management. This program enhances my strategic thinking, decision-making abilities, and leadership skills, which are crucial for managing projects effectively in the tech industry.
                         </h3>
                     </CardBody>
@@ -45,7 +45,7 @@ const EducationSection: React.FC = () => {
                             </div>
                         </div>
                         <h3 className="mt-2">
-                            <strong className='md:text-lg uppercase'>national University</strong>  (Management) <br />
+                            <strong className='md:text-md uppercase'>national University</strong>  (Management) <br />
                             Graduated with a BBA in Management, developing a strong foundation in business operations, project management, and organizational behavior. This coursework has equipped me with essential tools for leading teams and driving business success.
                         </h3>
                     </CardBody>
@@ -65,7 +65,7 @@ const EducationSection: React.FC = () => {
                             </div>
                         </div>
                         <h3 className="mt-2">
-                            <strong className='md:text-lg uppercase'>Mymensingh Gov. College</strong>  (Business) <br />
+                            <strong className='md:text-md uppercase'>Mymensingh Gov. College</strong>  (Business) <br />
                             I completed my HSC from Mymensingh Government College, where I first nurtured my interest in management and leadership, paving the way for my journey in business and technology. </h3>
                     </CardBody>
                 </Card>

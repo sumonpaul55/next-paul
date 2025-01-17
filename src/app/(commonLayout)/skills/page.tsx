@@ -17,7 +17,7 @@ const SkillsPage = async () => {
     return (
         <>
             <LoadingDoor />
-            <Container classname="pb-10">
+            <Container classname="pb-10 bg-slate-900">
                 <div>
                     <SectionTitle title="What I Do" />
                     <div className='grid grid-cols-1 sm:grid-cols-2 gap-5 lg:grid-cols-3 xl:grid-cols-4'>
