@@ -55,7 +55,7 @@ const TestimonialSlider = () => {
     };
 
     return (
-        <Container classname='py-12 bg-slate-900'>
+        <Container classname='py-12 bg-slate-950'>
             <SectionTitle title='Testimonial' className='text-white'>
                 <p className='text-left text-paragraphText'>Over the years, I&apos;ve built lasting relationships based on trust and quality. Here&apos;s what our clients have to say about us.</p>
             </SectionTitle>
