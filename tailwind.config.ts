@@ -15,7 +15,7 @@ const config: Config = {
         foreground: "var(--foreground)",
         baseGray: "#E9E7E8",
         TextHeading: "#030014",
-        primary: "#0040a8",
+        primary: "#020617",
         paragraphText: "#cbd5e1"
       },
       fontFamily: {
