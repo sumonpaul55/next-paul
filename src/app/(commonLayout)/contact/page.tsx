@@ -19,9 +19,9 @@ const Contact = () => {
     reset();
   };
   return (
-    <div className="flex flex-col items-center justify-center min-h-full bg-gray-100 p-4">
+    <div className="flex flex-col items-center justify-center min-h-full bg-primary p-4 text-white">
       <h1 className="text-4xl font-bold mb-6 text-center">Contact Me</h1>
-      <form onSubmit={handleSubmit(onSubmit)} className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+      <form onSubmit={handleSubmit(onSubmit)} className="bg-slate-800 p-6 rounded-lg shadow-lg w-full max-w-md">
         {/* Name Field */}
         <div className="mb-4">
           <label htmlFor="name" className="block text-sm font-medium text-gray-700">
