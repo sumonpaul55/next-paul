@@ -18,7 +18,6 @@ export default function Home() {
       <ProjectsSection />
       <EducationSection />
       {/* <ExperienceSection /> */}
-
       <TestimonialSlider />
       <PostSection />
     </main>

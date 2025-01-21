@@ -9,10 +9,10 @@ import React from 'react'
 const AllProject = () => {
     const { data, isLoading } = useGetProject()
     return (
-        <div className='p-3 md:p-5 bg-gray-200 py-10'>
+        <div className='p-3 md:p-5 bg-primary py-10'>
             {/* <LoadingDoor/> */}
             <SectionTitle title='My Work'>
-                <p>I have worked at multiple time on varius project. All project are build using my existing skills set and few porject are worked with group and almost all are developed by me.</p>
+                <p className='text-paragraphText'>I have worked at multiple time on varius project. All project are build using my existing skills set and few porject are worked with group and almost all are developed by me.</p>
             </SectionTitle>
             {
                 isLoading ? <LoadingSpinner /> :

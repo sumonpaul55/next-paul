@@ -24,7 +24,7 @@ const Contact = () => {
       <form onSubmit={handleSubmit(onSubmit)} className="bg-slate-800 p-6 rounded-lg shadow-lg w-full max-w-md">
         {/* Name Field */}
         <div className="mb-4">
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="name" className="block text-sm font-medium text-gray-300">
             Name
           </label>
           <Input
@@ -38,7 +38,7 @@ const Contact = () => {
 
         {/* Email Field */}
         <div className="mb-4">
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="email" className="block text-sm font-medium text-gray-300">
             Email
           </label>
           <Input
@@ -58,7 +58,7 @@ const Contact = () => {
 
         {/* Message Field */}
         <div className="mb-4">
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="message" className="block text-sm font-medium text-gray-300">
             Message
           </label>
           <Textarea
