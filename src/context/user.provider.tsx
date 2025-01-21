@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 import { getCurrentUser } from "@/src/services/authService/user";
 import { TUser } from "@/src/types";
@@ -10,7 +11,7 @@ type IUserProviderValues = {
     setIsloading: Dispatch<SetStateAction<boolean>>
     setUser: (user: TUser | null) => void;
 }
-const UserContext = createContext<IUserProviderValues | undefined>(undefined);
+const UserContext = createContext<IUserProviderValues | any>("");
 
 
 export const UserProvider = ({ children }: { children: ReactNode }) => {
@@ -26,6 +27,7 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
         handleUser()
     }, [isloading])
 
+    
 
     return <UserContext.Provider value={{ user, setUser, isloading, setIsloading }}>
         {children}

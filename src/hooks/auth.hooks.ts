@@ -2,37 +2,44 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useMutation } from "@tanstack/react-query";
 import { FieldValues } from "react-hook-form";
-import { toast } from "sonner";
+// import { toast } from "sonner";
 import { contactMe, loginUser, registerUser } from "../services/authService/user";
+import { toast } from "sonner";
 
 export const useUserRegistration = () => {
   return useMutation<any, Error, FieldValues>({
     mutationKey: ["USER_REGISTRATION"],
-    mutationFn: async (userData) => await registerUser(userData),
-    onSuccess: () => {
-      toast.success("Registered successfully");
+    mutationFn: async (userData) => {
+      const data = await registerUser(userData)
+      if (data) {
+        toast.success(data?.message)
+      } else {
+        toast.error(data?.error?.message || "something went worng")
+      }
     },
-    onError: (error: any) => {
-      toast.error(error);
-    },
+
   });
 };
-export const useContactForm =()=> {
+export const useContactForm = () => {
   return useMutation<any, Error, FieldValues>({
-    mutationKey:["CONTACT_FORM"],
-    mutationFn: async (formData) => await contactMe({body: formData}),
-    onSuccess: ()=> {
-      toast.success("Your Message Successfully sent, I will Reach you as soon as possible")
+    mutationKey: ["CONTACT_ME"],
+    mutationFn: async (formData) => {
+      const res = await contactMe(formData);
+      console.log(res)
     },
-    // onError: (error: any) => {
-    //   toast.error(error.message);
-    // },
+
   })
 }
 
 export const userLogin = () => {
   return useMutation<any, Error, FieldValues>({
     mutationKey: ["USER_LOGIN"],
-    mutationFn: async (userData) => await loginUser(userData),
+    mutationFn: async (userData) => {
+      const res = await loginUser(userData)
+      console.log(res)
+      if (res?.success) {
+        toast.success(res?.message)
+      }
+    },
   });
 };

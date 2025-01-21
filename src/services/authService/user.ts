@@ -31,8 +31,9 @@ export const loginUser = async (userData: FieldValues) => {
   }
 };
 export const contactMe = async (formData: FieldValues) => {
+  console.log(formData)
   try {
-    const { data } = await myInstance.post("/contact-me", formData);
+    const { data } = await myInstance.post("/contact/contactme", formData);
     return data;
   } catch (error: any) {
     throw new Error(error);
