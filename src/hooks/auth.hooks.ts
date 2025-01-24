@@ -20,16 +20,18 @@ export const useUserRegistration = () => {
 
   });
 };
-export const useContactForm = () => {
+export const useContact = () => {
   return useMutation<any, Error, FieldValues>({
     mutationKey: ["CONTACT_ME"],
-    mutationFn: async (formData) => {
-      const res = await contactMe(formData);
+    mutationFn: async (userData) => {
+      const res = await contactMe(userData)
       console.log(res)
+      if (res?.success) {
+        toast.success(res?.message)
+      }
     },
-
-  })
-}
+  });
+};
 
 export const userLogin = () => {
   return useMutation<any, Error, FieldValues>({

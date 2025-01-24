@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
-import { useContactForm } from "@/src/hooks/auth.hooks";
+import { useContact } from "@/src/hooks/auth.hooks";
 import { Input, Textarea } from "@nextui-org/react";
 // pages/contact.js
 import { FieldValues, useForm } from "react-hook-form";
 
 const Contact = () => {
-  const { mutate } = useContactForm()
+  const { mutate } = useContact()
   const {
     register,
     handleSubmit,
@@ -16,7 +16,7 @@ const Contact = () => {
 
   const onSubmit = async (data: FieldValues) => {
     mutate(data);
-    // reset();
+    reset();
   };
   return (
     <div className="flex flex-col items-center justify-center min-h-full bg-primary p-4 text-white">

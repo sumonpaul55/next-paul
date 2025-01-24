@@ -30,15 +30,15 @@ export const loginUser = async (userData: FieldValues) => {
     throw new Error(error);
   }
 };
-export const contactMe = async (formData: FieldValues) => {
-  console.log(formData)
+export const contactMe = async (userData: FieldValues) => {
   try {
-    const { data } = await myInstance.post("/contact/contactme", formData);
+    const { data } = await myInstance.post("/auth/login", userData);
     return data;
   } catch (error: any) {
     throw new Error(error);
   }
 };
+
 
 export const getCurrentUser = async () => {
   const accessToken = cookies().get("accessToken")?.value;
