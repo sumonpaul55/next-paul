@@ -16,7 +16,7 @@ const Contact = () => {
 
   const onSubmit = async (data: FieldValues) => {
     mutate(data);
-    reset();
+    // reset();
   };
   return (
     <div className="flex flex-col items-center justify-center min-h-full bg-primary p-4 text-white">
