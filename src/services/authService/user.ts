@@ -30,9 +30,17 @@ export const loginUser = async (userData: FieldValues) => {
     throw new Error(error);
   }
 };
-export const contactMe = async (userData: FieldValues) => {
+export const contactMe = async (formData: FieldValues) => {
   try {
-    const { data } = await myInstance.post("/auth/login", userData);
+    const { data } = await myInstance.post("/contact/contactme", formData);
+    return data;
+  } catch (error: any) {
+    throw new Error(error);
+  }
+};
+export const getMessage = async () => {
+  try {
+    const { data } = await myInstance.get("/contact/getmessage");
     return data;
   } catch (error: any) {
     throw new Error(error);
