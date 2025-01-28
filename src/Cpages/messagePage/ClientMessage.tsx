@@ -1,4 +1,5 @@
 "use client"
+import Skeletons from '@/src/components/shared/Skeleton';
 import { getClientMessage } from '@/src/hooks/auth.hooks'
 import { Button, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, useDisclosure } from '@nextui-org/react';
 import { ReactNode } from 'react';
@@ -15,7 +16,7 @@ type ClientMessage = {
 export const ClientMessage = () => {
     const { data, isLoading } = getClientMessage()
     if (isLoading) {
-        return <div className="text-center text-gray-500">Loading...</div>;
+        return <Skeletons childBox={4} parentClasses="" childClass='h-10' />
     }
     if (!data || data?.length === 0) {
         return <div className="text-center text-gray-500">No messages found.</div>;
