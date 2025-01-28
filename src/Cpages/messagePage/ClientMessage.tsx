@@ -22,8 +22,8 @@ export const ClientMessage = () => {
     }
 
     return (
-        <div className="mx-auto">
-            <h1 className="text-3xl font-bold text-gray-800 text-center mb-6">
+        <div className="mx-auto p-2">
+            <h1 className="text-3xl min-h-screen font-bold text-gray-800 text-center mb-6">
                 Client Messages
             </h1>
             <div className="overflow-x-auto">
