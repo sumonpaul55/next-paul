@@ -35,6 +35,9 @@ const DashBoardManu = () => {
                 <Link className="font-semibold text-primary capitalize bg-white px-3 py-1 rounded" href="/dashboard/post">
                     Post
                 </Link>
+                <Link className="font-semibold text-primary capitalize bg-white px-3 py-1 rounded" href="/dashboard/messages">
+                    messages
+                </Link>
 
             </div>
         </div>
