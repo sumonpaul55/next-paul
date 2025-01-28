@@ -14,7 +14,6 @@ type ClientMessage = {
 };
 export const ClientMessage = () => {
     const { data, isLoading } = getClientMessage()
-    console.log(data)
     if (isLoading) {
         return <div className="text-center text-gray-500">Loading...</div>;
     }
@@ -50,7 +49,7 @@ export const ClientMessage = () => {
                                 <td className="px-4 py-2 text-gray-800">{message?.email || "N/A"}</td>
                                 <td className="px-4 py-2 text-gray-800">{message?.phone || "N/A"}</td>
                                 <td className="px-4 py-2 text-gray-800">
-                                    <ShowMessage message={message?.message}>
+                                    <ShowMessage message={message?.message} name={message?.name}>
                                         {message?.message.slice(0, 20) || "N/A"}
                                     </ShowMessage>
                                 </td>
@@ -71,7 +70,7 @@ export const ClientMessage = () => {
 export default ClientMessage
 
 
-const ShowMessage = ({ children, message }: { children: ReactNode, message: string }) => {
+const ShowMessage = ({ children, message, name }: { children: ReactNode, message: string, name: string }) => {
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
     return (
@@ -81,12 +80,9 @@ const ShowMessage = ({ children, message }: { children: ReactNode, message: stri
                 <ModalContent>
                     {(onClose) => (
                         <>
-                            <ModalHeader className="flex flex-col gap-1">Modal Title</ModalHeader>
+                            <ModalHeader className="flex flex-col gap-1 capitalize">{name}</ModalHeader>
                             <ModalBody>
-                                <p>
-                                    {message}
-                                </p>
-
+                                <p>{message}</p>
                             </ModalBody>
                             <ModalFooter>
                                 <Button color="danger" variant="light" onPress={onClose}>
