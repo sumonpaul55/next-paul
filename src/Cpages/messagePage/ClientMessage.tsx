@@ -15,23 +15,24 @@ type ClientMessage = {
 };
 export const ClientMessage = () => {
     const { data, isLoading } = getClientMessage()
+    console.log(data)
     if (isLoading) {
         return <Skeletons childBox={4} parentClasses="" childClass='h-10' />
     }
-    if (!data || data?.length === 0) {
-        return <div className="text-center text-gray-500">No messages found.</div>;
-    }
+    // if (!data || data?.length === 0) {
+    //     return <div className="text-center text-gray-500">No messages found.</div>;
+    // }
 
     return (
         <div className="mx-auto p-2">
-            <h1 className="text-3xl min-h-screen font-bold text-gray-800 text-center mb-6">
+            <h1 className="md:text-2xl font-bold text-gray-800 text-center mb-6">
                 Client Messages
             </h1>
             <div className="overflow-x-auto">
-                <table className="table-auto w-full bg-white shadow-md rounded-lg border border-gray-300">
+                <table className="table-auto w-full bg-white text-black shadow-md rounded-lg border border-gray-300">
                     <thead className="bg-gray-100 border-b">
                         <tr>
-                            <th className="px-4 py-2 text-left border text-gray-800 font-semibold">#</th>
+                            <th className="px-4 py-2 text-left border text-gray-800 font-semibold">No</th>
                             <th className="px-4 py-2 text-left border text-gray-800 font-semibold">Name</th>
                             <th className="px-4 py-2 text-left border text-gray-800 font-semibold">Email</th>
                             <th className="px-4 py-2 text-left border text-gray-800 font-semibold">Phone</th>
@@ -40,7 +41,7 @@ export const ClientMessage = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {data.map((message: ClientMessage, index: number) => (
+                        {data?.map((message: ClientMessage, index: number) => (
                             <tr
                                 key={index}
                                 className={`border-b ${index % 2 === 0 ? "bg-gray-100" : "bg-white"}`}
@@ -69,7 +70,6 @@ export const ClientMessage = () => {
 }
 
 export default ClientMessage
-
 
 const ShowMessage = ({ children, message, name }: { children: ReactNode, message: string, name: string }) => {
     const { isOpen, onOpen, onOpenChange } = useDisclosure();

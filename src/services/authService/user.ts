@@ -15,7 +15,7 @@ export const registerUser = async (userData: FieldValues) => {
     }
     return data;
   } catch (error: any) {
-    throw new Error(error);
+    throw new Error(error?.message);
   }
 };
 
@@ -27,7 +27,7 @@ export const loginUser = async (userData: FieldValues) => {
     }
     return data;
   } catch (error: any) {
-    throw new Error(error);
+    throw new Error(error?.message);
   }
 };
 export const contactMe = async (formData: FieldValues) => {
@@ -35,7 +35,7 @@ export const contactMe = async (formData: FieldValues) => {
     const { data } = await myInstance.post("/contact/contactme", formData);
     return data;
   } catch (error: any) {
-    throw new Error(error);
+    throw new Error(error?.message);
   }
 };
 export const getMessage = async () => {
@@ -43,7 +43,7 @@ export const getMessage = async () => {
     const { data } = await myInstance.get("/contact/getmessage");
     return data;
   } catch (error: any) {
-    throw new Error(error);
+    throw new Error(error?.message);
   }
 };
 
