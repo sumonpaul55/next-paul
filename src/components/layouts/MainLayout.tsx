@@ -8,10 +8,11 @@ import { FaLinkedin } from "react-icons/fa6";
 import { Divider, } from "@nextui-org/react";
 import { Tmenu } from "@/src/types";
 import { useUser } from "@/src/context/user.provider";
-import LoadingSpinner from "../shared/LoadingSpinner";
+// import LoadingSpinner from "../shared/LoadingSpinner";
 import me from "../../../public/img/paul.png"
 import Image from "next/image"
 import { logout } from "@/src/services/authService/user";
+import Skeletons from "../shared/Skeleton";
 const MainLayout = ({ children }: { children: ReactNode }) => {
     const { user, isloading } = useUser()
     const pathname = usePathname()
@@ -62,7 +63,8 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
                         </div>
                         <Divider />
                         <div className="flex flex-col gap-2">
-                            {isloading ? <LoadingSpinner /> :
+                            {isloading ? <Skeletons childBox={6} childClass="h-10" parentClasses="grid gap-2 bg-transparent">
+                            </Skeletons> :
                                 menuBar?.map((items: Tmenu, idx) => {
                                     if (items?.url === "/dashboard" && user?.role !== "ADMIN") {
                                         return
