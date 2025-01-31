@@ -1,6 +1,5 @@
 "use client"
 import Container from '@/src/components/Container'
-import LoadingSpinner from '@/src/components/shared/LoadingSpinner'
 import SectionTitle from '@/src/components/shared/SectionTitle'
 import Skeletons from '@/src/components/shared/Skeleton'
 import SkillsCard from '@/src/components/shared/SkillsCard'
