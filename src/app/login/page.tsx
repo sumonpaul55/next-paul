@@ -4,6 +4,7 @@ import Container from "@/src/components/Container";
 import MyForm from "@/src/components/form/MyForm";
 import MyInput from "@/src/components/form/MyInput";
 import LoadingBlur from "@/src/components/shared/LoadingBlur";
+import { useUser } from "@/src/context/user.provider";
 import { userLogin } from "@/src/hooks/auth.hooks";
 import loginValidationSchema from "@/src/validation/loginvalidation";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -18,9 +19,9 @@ import { toast } from "sonner";
 const LoginPage = () => {
     const router = useRouter()
     const { mutate, isPending, isSuccess, isError } = userLogin();
+    const { updateUser } = useUser()
 
     const redirect = useSearchParams()?.get("redirect")
-
     // const { setIsLoading } = useUser()
     const onSubmit: SubmitHandler<FieldValues> = async (data) => {
         const userData = { ...data }
@@ -34,6 +35,7 @@ const LoginPage = () => {
     if (!isPending && isSuccess) {
         if (redirect) {
             router.push(redirect)
+            updateUser()
         } else {
             router.push("/")
         }
