@@ -6,6 +6,7 @@ import WhatIDo from "@/src/Cpages/home/WhatIDo";
 import PostSection from "../Cpages/home/PostSection";
 import LoadingDoor from "../components/shared/LoadinDoor";
 import ProjectsSection from "../Cpages/home/ProjectsSection";
+import ServiceSection from "../Cpages/home/ServiceSection";
 
 
 
@@ -15,6 +16,9 @@ export default function Home() {
       <LoadingDoor />
       <Hero />
       <WhatIDo />
+      {/* service section */}
+      <ServiceSection />
+      {/* project */}
       <ProjectsSection />
       <EducationSection />
       {/* <ExperienceSection /> */}

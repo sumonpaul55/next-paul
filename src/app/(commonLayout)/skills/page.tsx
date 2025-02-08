@@ -8,11 +8,11 @@ import SkillsCard from "@/src/components/shared/SkillsCard"
 const SkillsPage = async () => {
     // const { data } = await getSkills();
 
-    const res = await fetch("https://portfolio-server-psi-taupe.vercel.app/api/skills", {
+    const res = await fetch("https://portfolio-server-beige-beta.vercel.app/api/skills", {
         cache: "no-store"
     });
 
-    const data = await res.json()
+    const data = await res?.json()
 
     return (
         <>
