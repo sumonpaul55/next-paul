@@ -32,7 +32,7 @@ const services = [
 
 const ServiceSection = () => {
     return (
-        <section className="bg-black py-16">
+        <section className="bg-black py-12">
             <div className="px-6">
                 <h2 className="text-3xl font-bold text-white text-center mb-12">
                     My Services
