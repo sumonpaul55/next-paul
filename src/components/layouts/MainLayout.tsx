@@ -35,7 +35,7 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
                     </div>
                 }
                 {/* Sidebar */}
-                <div className={`bg-slate-950 bg-opacity-95 border-r-1 flex flex-col justify-between border-gray-200 w-[200px] sm:w-[300px] p-3 md:p-6 transition-transform transform fixed lg:static top-0 left-0 h-full lg:h-auto z-50 overflow-y-auto ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0`}>
+                <div className={`bg-slate-950 bg-opacity-95 border-r-1 flex flex-col justify-between border-gray-500 w-[200px] sm:w-[300px] p-3 md:p-6 transition-transform transform fixed lg:static top-0 left-0 h-full lg:h-auto z-50 overflow-y-auto ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0`}>
                     {
                         isSidebarOpen && <div className={`lg:hidden bg-gray-800 rounded-full size-11 flex justify-center items-center fixed top-2 bg-opacity-70 z-50 ${isSidebarOpen ? "right-2" : "left-2"}`}>
                             <button onClick={toggleSidebar}
@@ -81,7 +81,7 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
                     <div className="">
                         {
                             !isloading && user ? <div className="flex gap-1 justify-between p-1 rounded-lg bg-slate-800 text-paragraphText">
-                                <h3 className="w-[70%] py-1 md:text-lg px-3 rounded-lg">{user?.email}</h3>
+                                <h3 className="w-[70%] py-1 md:text-lg px-3 rounded-lg">{user?.name}</h3>
                                 {/* <Image src={`${user?.profilePhoto}`} alt={`${user?.name}`} width={100} height={100} className="size-10 rounded-full" /> */}
                                 <button onClick={() => logout()} className="bg-transparent border border-slate-600 px-2 hover:bg-gray-300 rounded-md py-1">Logout</button>
                             </div> :
