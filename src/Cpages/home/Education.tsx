@@ -7,7 +7,7 @@ import SectionTitle from '@/src/components/shared/SectionTitle';
 import Container from '@/src/components/Container';
 const EducationSection: React.FC = () => {
     return (
-        <Container classname='pt-10 pb-20 educationSection font-sans text-white'>
+        <Container classname='md:pt-10 mt-5 md:mt-0 pb-5  pb-20 educationSection font-sans text-white'>
             {/* <h2 className="text-lg md:text-3xl lg:text-4xl font-bold text-center mb-12">Education</h2> */}
             <SectionTitle title="Education" className=''>
                 <p className='text-paragraphText'>All of my educational qualifiction</p>

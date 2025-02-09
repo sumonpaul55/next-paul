@@ -35,11 +35,11 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
                     </div>
                 }
                 {/* Sidebar */}
-                <div className={`bg-slate-950 bg-opacity-95 border-r-1 flex flex-col justify-between border-gray-200 w-[250px] sm:w-[350px] p-3 md:p-6 transition-transform transform fixed lg:static top-0 left-0 h-full lg:h-auto z-50 overflow-y-auto ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0`}>
+                <div className={`bg-slate-950 bg-opacity-95 border-r-1 flex flex-col justify-between border-gray-200 w-[200px] sm:w-[300px] p-3 md:p-6 transition-transform transform fixed lg:static top-0 left-0 h-full lg:h-auto z-50 overflow-y-auto ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0`}>
                     {
-                        isSidebarOpen && <div className={`lg:hidden p-3 bg-gray-800 rounded-full size-11 flex justify-center items-center fixed top-2 bg-opacity-70 z-50 ${isSidebarOpen ? "right-2" : "left-2"}`}>
+                        isSidebarOpen && <div className={`lg:hidden bg-gray-800 rounded-full size-11 flex justify-center items-center fixed top-2 bg-opacity-70 z-50 ${isSidebarOpen ? "right-2" : "left-2"}`}>
                             <button onClick={toggleSidebar}
-                                className="text-xl  text-white focus:outline-none">
+                                className="text-lg  text-white focus:outline-none">
                                 <FaTimes />
                             </button>
                         </div>
@@ -47,11 +47,13 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
 
                     {/* Profile Info */}
                     <div className="space-y-6">
-                        <div className="text-center space-x-4">
+                        <div className="text-center md:space-x-4">
                             {/* <FaUserCircle size={50} className="text-gray-400 mx-auto" /> */}
                             <Image src={me} alt="Sumon Paul" height={300} width={300} className="text-gray-400 size-20 mx-auto rounded-full mb-4" />
                             <div className="mb">
-                                <h2 className="text-lg font-semibold md:text-2xl font-sans text-white"><Link href={`/`} onClick={() => setIsSidebarOpen(!isSidebarOpen)}>Sumon Paul</Link></h2>
+                                <h2 className="text-lg font-semibold md:text-2xl font-sans text-white">
+                                    <Link href={`/`} onClick={() => setIsSidebarOpen(!isSidebarOpen)}>Sumon Paul</Link>
+                                </h2>
                                 <p className="text-sm text-paragraphText">Web Developer</p>
                             </div>
                             <div className="flex justify-evenly w-full mt-4">
