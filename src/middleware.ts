@@ -5,9 +5,7 @@ import { getCurrentUser } from "./services/authService/user";
 // type role = keyof typeof roleBaseRoutes;
 
 const Authroutes = ["/login", "/registration"];
-
 const ProtectedRoute = [""];
-
 const dashBoardRoute = ["/dashboard", "/dashboard/skills", "/dashboard/post", "/dashboard/projects", "/dashboard/skills/add-skills"];
 
 // const roleBaseRoutes = {
