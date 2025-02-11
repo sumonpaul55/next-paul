@@ -30,3 +30,12 @@ export const getProjectById = async (id: string) => {
     throw new Error(error);
   }
 };
+
+export const updateProject = async (id: string, projectData: FieldValues) => {
+  try {
+    const { data } = await myInstance.put(`/project/${id}`, projectData)
+    return data;
+  } catch (error: any) {
+    throw new Error(error)
+  }
+}

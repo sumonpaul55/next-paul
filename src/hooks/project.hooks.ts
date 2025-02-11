@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { FieldValues } from "react-hook-form";
-import { addProject, getProject } from "../services/projectService";
+import { addProject, getProject, updateProject } from "../services/projectService";
 import { toast } from "sonner";
 
 export const useAddProjects = () => {
@@ -26,3 +26,10 @@ export const useGetProject = () => {
     queryFn: async () => await getProject(),
   });
 };
+
+export const useUpdateProject = (id: string, data: FieldValues) => {
+  return useMutation<any, Error, FieldValues>({
+    mutationKey: ["UPDATE_PROJECT"],
+    mutationFn: async () => updateProject(id, data)
+  })
+}
