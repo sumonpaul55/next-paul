@@ -8,7 +8,7 @@ const AddProjects = () => {
     })
     return (
         <div className='p-4 md:p-10'>
-            <AddProjectForm />
+            <AddProjectForm page='add' />
         </div>
     )
 }

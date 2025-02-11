@@ -7,6 +7,8 @@ import { getKeyValue, Table, TableBody, TableCell, TableColumn, TableHeader, Tab
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { BsTrash } from 'react-icons/bs'
+import { FaEdit } from 'react-icons/fa'
 
 
 const AllProjectDashboard = () => {
@@ -14,15 +16,32 @@ const AllProjectDashboard = () => {
     const allProject = data?.data;
     console.log(allProject)
 
+    // handle delte project
+    const handleDelete = (id: string) => {
+        console.log(id)
+    }
+    // handle update project
+    const handleUpdateProject = (id: string) => {
+        console.log(id)
+    }
+
 
     const rows: { key: number, liverLink: string, image: string, overview: string, name: string, technology: string }[] = allProject?.map((item: TProjects, idx: number) => {
         return {
             key: idx,
             liverLink: <Link target="_blank" href={item?.liveLink}>View Live</Link>,
-            image: <Image src={item?.image} width={200} height={200} alt={item?.name} className='size-20 object-cover' />,
+            image: <Image src={item?.image} width={200} height={400} alt={item?.name} className='size-14 object-cover' />,
             overview: item?.overview,
             name: item?.name,
             technology: item?.technology,
+            action: <div>
+                <button onClick={() => handleDelete(item?._id)} className='p-2 hover:bg-red-500 hover:text-white text-xl rounded-full duration-400'>
+                    <BsTrash />
+                </button>
+                <button onClick={() => handleUpdateProject(item?._id)} className='p-2 hover:bg-red-500 hover:text-white text-xl rounded-full duration-400'>
+                    <FaEdit />
+                </button>
+            </div>
         }
     })
 

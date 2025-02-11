@@ -16,3 +16,10 @@ export const projectDatavalidation = z.object({
     message: "Please separate multiple technologies with commas, without spaces.",
   }),
 });
+export const updateProjectDatavalidation = z.object({
+  name: z.string({ required_error: "project name is required" }).min(6, "name minimum 6 character").optional(),
+  liveLink: z.string({ required_error: "project name is required" }).min(6, "name minimum 6 character").url().optional(),
+  technology: z.string().refine((val) => /^[a-zA-Z]+(,[a-zA-Z]+)*$/.test(val), {
+    message: "Please separate multiple technologies with commas, without spaces.",
+  }).optional(),
+});

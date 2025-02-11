@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client"
 import { Button, } from "@nextui-org/react";
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -8,10 +9,10 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import LoadingBlur from "@/src/components/shared/LoadingBlur";
 import MyForm from "@/src/components/form/MyForm";
 import MyInput from "@/src/components/form/MyInput";
-import { projectDatavalidation } from "@/src/validation/validation";
+import { projectDatavalidation, updateProjectDatavalidation } from "@/src/validation/validation";
 import { useAddProjects } from "@/src/hooks/project.hooks";
 
-export default function AddProjectForm() {
+export default function AddProjectForm({ page, item }: { page: string; item?: any }) {
     // const router = useRouter()
     const editor = useRef(null)
     const [content, setContent] = useState('');
@@ -50,7 +51,7 @@ export default function AddProjectForm() {
             {
                 isPending ? <LoadingBlur /> :
                     <div className='pb-10 px-2 md:px-0'>
-                        <MyForm onSubmit={handleSubmit} resolver={zodResolver(projectDatavalidation)}>
+                        <MyForm defaultValues={page === "edit" && item} onSubmit={handleSubmit} resolver={page !== "edit" ? zodResolver(projectDatavalidation) : zodResolver(updateProjectDatavalidation)}>
                             <div className="flex gap-4 items-center mb-3 flex-col sm:flex-row">
                                 <MyInput label='Project Name' name="name" className='mb-0' size="sm" />
                                 <MyInput label="Technology" name="technology" placeholder="Tech1, tech2, tech3" size="sm" />
@@ -71,7 +72,6 @@ export default function AddProjectForm() {
                                 // onChange={newContent => { console.log(newContent) }}
                                 />
                             </div>
-
                             <Button type='submit' className='mt-4 bg-secondary text-white md:px-20' isDisabled={!image}>Submit Project</Button>
                         </MyForm>
                     </div>
