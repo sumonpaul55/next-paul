@@ -11,7 +11,6 @@ import { useUser } from "@/src/context/user.provider";
 // import LoadingSpinner from "../shared/LoadingSpinner";
 import me from "../../../public/img/paul.png"
 import Image from "next/image"
-import { logout } from "@/src/services/authService/user";
 import Skeletons from "../shared/Skeleton";
 const MainLayout = ({ children }: { children: ReactNode }) => {
     const { user, isloading } = useUser()
@@ -78,16 +77,13 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
                             }
                         </div>
                     </div>
-                    <div className="">
-                        {
-                            !isloading && user ? <div className="flex gap-1 justify-between p-1 rounded-lg bg-slate-800 text-paragraphText">
-                                <h3 className="w-[70%] py-1 md:text-lg px-3 rounded-lg">{user?.name}</h3>
-                                {/* <Image src={`${user?.profilePhoto}`} alt={`${user?.name}`} width={100} height={100} className="size-10 rounded-full" /> */}
-                                <button onClick={() => logout()} className="bg-transparent border border-slate-600 px-2 hover:bg-gray-300 rounded-md py-1">Logout</button>
-                            </div> :
-                                <Link href={`/login`} onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="w-full py-1 rounded-lg text-center block bg-primary text-white md:text-lg">Login</Link>
-                        }
-                    </div>
+                    {/* {
+                        !isloading && user ? <div className="flex gap-1 justify-between p-1 rounded-lg bg-slate-800 text-paragraphText">
+                            <h3 className="w-[70%] py-1 md:text-lg px-3 rounded-lg">{user?.name}</h3>
+                            <button onClick={() => logout()} className="bg-transparent border border-slate-600 px-2 hover:bg-gray-300 rounded-md py-1">Logout</button>
+                        </div> :
+                            <Link href={`/login`} onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="w-full py-1 rounded-lg text-center block bg-primary text-white md:text-lg">Login</Link>
+                    } */}
                 </div>
 
                 {/* Content Area */}
