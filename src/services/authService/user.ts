@@ -47,6 +47,7 @@ export const getMessage = async () => {
   }
 };
 
+
 export const getCurrentUser = async () => {
   const accessToken = cookies().get("accessToken")?.value;
   let decodedToken = null;
