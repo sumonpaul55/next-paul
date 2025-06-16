@@ -7,7 +7,7 @@ const ProjectDetails = ({ project }: { project: TProjects }) => {
     const { name, technology, overview, image, liveLink } = project;
 
     return (
-        <div className="min-h-screen bg-gray-100 p-3 md:p-6">
+        <div className="min-h-screen p-3 md:p-6 max-w-[800px] mx-auto">
             {/* Project Banner */}
             <motion.div
                 className="h-64 md:h-80 bg-cover rounded-lg shadow-lg mb-6 bg-top hover:bg-bottom duration-1000"

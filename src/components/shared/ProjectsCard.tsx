@@ -1,33 +1,57 @@
-"use client"
+"use client";
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-const ProjectCard = ({ _id, liveLink, name, technology, image }: { _id: string; liveLink: string; name: string; technology: string; overview?: string; image: string }) => {
-    return (
-        <div className='group'>
-            <motion.div
-                className="relative w-full h-[300px] shadow-lg overflow-hidden bg-cover bg-top hover:bg-bottom duration-1000"
-                style={{ backgroundImage: `url(${image})` }}// whileHover={{ scale: 1.05 }}
-            >
-                <Link href={`/projects/${_id}`} className='bg-primary bg-opacity-90 p-2 w-[50%] absolute text-white -left-full group-hover:left-0 duration-500 bottom-0 hover:bg-blue-700 text-sm'>
-                    Project Details
-                </Link>
-                <Link href={liveLink} target='_blank' className='bg-primary bg-opacity-90 p-2 w-[50%] absolute text-white  -top-full group-hover:top-[88%] duration-200 left-[50.5%] hover:bg-blue-700 text-sm'>
-                    View Live
-                </Link>
-            </motion.div>
+const ProjectCard = ({
+  _id,
+  liveLink,
+  name,
+  technology,
+  image,
+}: {
+  _id: string;
+  liveLink: string;
+  name: string;
+  technology: string;
+  overview?: string;
+  image: string;
+}) => {
+  return (
+    <motion.div
+      whileHover={{ scale: 1.02 }}
+      className="relative rounded-xl shadow-xl overflow-hidden group bg-white"
+    >
+      {/* Project Image */}
+      <div
+        className="h-64 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+        style={{ backgroundImage: `url(${image})` }}
+      />
 
-            <div className="inset-0 bg-black bg-opacity-30 flex items-end justify-between z-50">
-                {/* Project Info */}
-                <div className="text-left bg-gray-800 w-full px-3 pt-3">
-                    <h2 className="text-white font-bold line-clamp-1">{name}</h2>
-                    <p className="text-gray-300">{technology}</p>
-                </div>
-                {/* Project Overview - Initially Hidden */}
-            </div>
-        </div>
-    );
+      {/* Hover Overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-3 p-4 backdrop-blur-sm">
+        <Link
+          href={`/projects/${_id}`}
+          className="bg-white text-black font-medium px-4 py-2 rounded hover:bg-gray-200 transition-colors text-sm shadow"
+        >
+          View Details
+        </Link>
+        <Link
+          href={liveLink}
+          target="_blank"
+          className="bg-primary text-white font-medium px-4 py-2 rounded hover:bg-blue-700 transition-colors text-sm shadow"
+        >
+          Live Preview
+        </Link>
+      </div>
+
+      {/* Project Info */}
+      <div className="p-4 bg-white">
+        <h3 className="text-lg font-semibold text-gray-800 line-clamp-1">{name}</h3>
+        <p className="text-sm text-gray-500">{technology}</p>
+      </div>
+    </motion.div>
+  );
 };
 
 export default ProjectCard;
