@@ -9,7 +9,8 @@ import React from 'react'
 const WhatIDo = () => {
     const { data, isLoading } = useGetSkills();
     return (
-        <Container classname='md:py-20'>
+        <div className='container mx-auto'>
+            <Container classname='md:py-20'>
             <div className='text-white'>
                 <SectionTitle className='' title='What I do'>
                     <p className='md:text-lg text-paragraphText'>I have over 2 years of experience building responsive and engaging front-end applications, as well as 1+ year of experience working with the MERN (MongoDB, Express, React, Node.js) stack for full-stack development.
@@ -26,6 +27,7 @@ const WhatIDo = () => {
                 }
             </div>
         </Container>
+        </div>
     )
 }
 
