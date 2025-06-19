@@ -62,8 +62,8 @@ const TestimonialSlider = () => {
 
             <Carousel responsive={responsive} draggable={true} showDots={true} ssr={true} infinite={true} className='py-10'>
                 {testimonials.map((testimonial, index) => (
-                    <div key={index} className="px-4 h-full" >
-                        <Card className="hover:border border p-4 md:p-6 h-full bg-gray-100 text-black hover:bg-gray-800 hover:text-white">
+                    <div key={index} className="sm:px-4 h-full" >
+                        <Card className="hover:border border sm:p-4 md:p-6 h-full bg-gray-100 text-black hover:bg-gray-800 hover:text-white">
                             <CardBody className='h-full'>
                                 <div className="flex justify-center mb-4">
                                     <Avatar
