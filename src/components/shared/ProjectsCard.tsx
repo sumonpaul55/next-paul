@@ -20,7 +20,7 @@ const ProjectCard = ({
   return (
     <motion.div
       whileHover={{ scale: 1.02 }}
-      className="relative rounded-xl shadow-xl overflow-hidden group bg-white"
+      className="relative rounded-md shadow-xl overflow-hidden group bg-white"
     >
       {/* Project Image */}
       <div

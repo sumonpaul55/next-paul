@@ -34,7 +34,7 @@
 }
 
 .educationSection {
-  background: linear-gradient(#0f172ae3, #0f172ae3), url("../../public/img/bgEdu.jpg");
+  background: linear-gradient(#ffffffe5, #ffffffe5), url("../../public/img/bgEdu.jpg");
   background-size: contain;
   background-repeat: repeat;
   background-attachment: fixed;

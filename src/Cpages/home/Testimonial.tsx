@@ -55,16 +55,16 @@ const TestimonialSlider = () => {
     };
 
     return (
-        <Container classname='md:py-12 bg-slate-950'>
-            <SectionTitle title='Testimonial' className='text-white'>
-                <p className='text-left text-paragraphText'>Over the years, I&apos;ve built lasting relationships based on trust and quality. Here&apos;s what our clients have to say about us.</p>
+        <Container classname='md:py-12'>
+            <SectionTitle title='Testimonial' className=''>
+                <p className='text-left'>Over the years, I&apos;ve built lasting relationships based on trust and quality. Here&apos;s what our clients have to say about us.</p>
             </SectionTitle>
 
             <Carousel responsive={responsive} draggable={true} showDots={true} ssr={true} infinite={true} className='py-10'>
                 {testimonials.map((testimonial, index) => (
                     <div key={index} className="px-4 h-full" >
-                        <Card className="hover:bg-slate-900 hover:border border p-4 md:p-6 h-full bg-gray-800 text-white">
-                            <CardBody className='h-full text-white'>
+                        <Card className="hover:border border p-4 md:p-6 h-full bg-gray-100 text-black hover:bg-gray-800 hover:text-white">
+                            <CardBody className='h-full'>
                                 <div className="flex justify-center mb-4">
                                     <Avatar
                                         size="lg"
@@ -73,8 +73,8 @@ const TestimonialSlider = () => {
                                     />
                                 </div>
                                 <h3 className="font-semibold text-lg">{testimonial.name}</h3>
-                                <p className="text-sm text-gray-100">{testimonial.role}</p>
-                                <p className="mt-4 text-paragraphText">{testimonial.feedback}</p>
+                                <p className="text-sm">{testimonial.role}</p>
+                                <p className="mt-4">{testimonial.feedback}</p>
                             </CardBody>
                         </Card>
                     </div>

@@ -25,11 +25,12 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
     };
 
     return (
-        <div className="h-[calc(100vh-48px)]">
+        // <div className="h-[calc(100vh-48px)]">
+        <div className="">
             <div className="h-full flex flex-col">
                 {/* Toggle button for small screens */}
                 {
-                    !isSidebarOpen && <div className={`lg:hidden p-3 bg-gray-800 rounded-full size-11 flex justify-center items-center fixed top-2 bg-opacity-70 z-50 ${isSidebarOpen ? "right-2" : "left-2"}`}>
+                    !isSidebarOpen && <div className={`md:hidden p-3 bg-gray-400 rounded-full size-11 flex justify-center items-center fixed top-2 bg-opacity-70 z-50 ${isSidebarOpen ? "left-2" : "right-3"}`}>
                         <button onClick={toggleSidebar}
                             className="text-xl  text-white focus:outline-none">
                             <FaBars />
@@ -92,7 +93,7 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
                 </div>
 
                 {/* Content Area */}
-                <div className="bg-white w-full lg:flex-1 overflow-y-scroll">
+                <div className="bg-white w-full lg:flex-1 relative">
                     <CustomNavbar />
                     {children}
                 </div>

@@ -7,14 +7,14 @@ import SectionTitle from '@/src/components/shared/SectionTitle';
 import Container from '@/src/components/Container';
 const EducationSection: React.FC = () => {
     return (
-        <Container classname='md:pt-10 mt-5 md:mt-0 pb-5 md:pb-20 educationSection font-sans text-white'>
+        <Container classname='md:pt-10 mt-5 md:mt-0 pb-5 md:pb-20 educationSection font-sans'>
             {/* <h2 className="text-lg md:text-3xl lg:text-4xl font-bold text-center mb-12">Education</h2> */}
             <SectionTitle title="Education" className=''>
-                <p className='text-paragraphText'>All of my educational qualifiction</p>
+                <p className=''>All of my educational qualifiction</p>
             </SectionTitle>
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10'>
                 {/* MBA Section */}
-                <Card className="bg-slate-900">
+                <Card className="">
                     <CardBody>
                         <div className='flex gap-4 mb-5 items-center'>
                             <div className='bg-gray-200 size-16 rounded-full flex justify-center items-center'>
@@ -31,7 +31,7 @@ const EducationSection: React.FC = () => {
                         </h3>
                     </CardBody>
                 </Card>
-                <Card className="bg-slate-900">
+                <Card className="">
                     <CardBody>
                         <div className='flex gap-4 mb-5 items-center'>
                             <div className='bg-gray-200 size-16 rounded-full flex justify-center items-center'>
@@ -51,7 +51,7 @@ const EducationSection: React.FC = () => {
                     </CardBody>
                 </Card>
                 {/* BBA Section */}
-                <Card className="bg-slate-900">
+                <Card className="">
                     <CardBody>
                         <div className='flex gap-4 mb-5 items-center'>
                             <div className='bg-gray-200 size-16 rounded-full flex justify-center items-center'>
@@ -70,7 +70,7 @@ const EducationSection: React.FC = () => {
                     </CardBody>
                 </Card>
                 {/* Developer Proficiency Section */}
-                <Card className="bg-slate-900">
+                <Card className="">
                     <CardBody>
                         <div className='flex gap-4 mb-5 items-center'>
                             <div className='bg-gray-200 size-16 rounded-full flex justify-center items-center'>

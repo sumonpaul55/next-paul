@@ -13,7 +13,7 @@ const PostCard = ({ postData }: { postData: TPost }) => {
     const postImg = getImageFromHtml(post)
 
     return (
-        <div className="overflow-hidden shadow-xl rounded-md h-full pb-4 bg-slate-700 text-white">
+        <div className="overflow-hidden shadow-xl rounded-md h-full pb-4 bg-black text-white">
             {/* Image */}
             <Image
                 className="w-full h-48 object-cover"
@@ -28,12 +28,12 @@ const PostCard = ({ postData }: { postData: TPost }) => {
                 <span className="inline-block bg-gray-900 rounded-full px-3 py-1 text-sm font-semibold mr-2">
                     {category}
                 </span>
-                <Link className="bg-primary-900 text-white p-1 rounded-md" href={`/post/${_id}`}>Read more...</Link>
+                <Link className="bg-primary-900 text-white p-1 rounded-md px-4" href={`/post/${_id}`}>Read more...</Link>
             </div>
 
             {/* Post Content */}
             <div className="px-6 py-4">
-                <h3 className="font-bold text-xl mb-2 line-clamp-2">{title}</h3>
+                <h3 className="font-bold mb-2 line-clamp-2">{title}</h3>
                 {/* <div
                     className="text-gray-700 text-base"
                     dangerouslySetInnerHTML={{ __html: post }}
@@ -41,7 +41,7 @@ const PostCard = ({ postData }: { postData: TPost }) => {
             </div>
 
             {/* Author and Date */}
-            <div className="px-6 pt-4 pb-2">
+            <div className="px-6 pb-2">
                 <div className="flex items-center space-x-3">
                     <Image
                         className="w-10 h-10 rounded-full"

@@ -17,10 +17,10 @@ const SkillsPage = async () => {
     return (
         <>
             <LoadingDoor />
-            <Container classname="pb-10 bg-primary">
+            <Container classname="pb-10 mt-20">
                 <div>
                     <SectionTitle title="What I Do" />
-                    <div className='grid grid-cols-1 sm:grid-cols-2 gap-5 lg:grid-cols-3 xl:grid-cols-4'>
+                    <div className='grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-7 lg:grid-cols-3 xl:grid-cols-4'>
                         {
                             data?.data?.map((item: { _id: string; name: string; description: string; image: string }) => (
                                 <SkillsCard key={item._id} name={item?.name} description={item?.description} image={item?.image} />

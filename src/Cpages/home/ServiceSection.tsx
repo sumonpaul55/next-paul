@@ -2,53 +2,108 @@ import Image from "next/image";
 import customWebdevelopment from "@/src/../public/img/webdevelopment.png"
 import fullstack from "@/src/../public/img/fullstack.png"
 import apiimplement from "@/src/../public/img/apiimplement.png"
+import ecommerceImage from "@/src/../public/img/ecommerce.jpg"
+import agencyWebsiteImage from "@/src/../public/img/agency.jpg"
 import seo from "@/src/../public/img/seo.jpg"
+import posImage from "@/src/../public/img/pos.jpg"
+import managementimg from "@/src/../public/img/management.jpg"
+// const services = [
+//     {
+//         title: "Custom Web Development",
+//         description:
+//             "I build responsive, high-performance websites using the latest technologies. Get a custom solution tailored to your needs.",
+//         image: customWebdevelopment, // Replace with actual image
+//     },
+//     {
+//         title: "Full-Stack Web Applications",
+//         description:
+//             "From backend to frontend, I develop dynamic and scalable web applications using the MERN stack to deliver seamless user experiences.",
+//         image: fullstack, // Replace with actual image
+//     },
+//     {
+//         title: "API Development & Integration",
+//         description:
+//             "I create RESTful and GraphQL APIs that connect your application with third-party services or build custom APIs to enhance functionality.",
+//         image: apiimplement, // Replace with actual image
+//     },
+//     {
+//         title: "Performance Optimization & SEO",
+//         description:
+//             "Boost your website’s speed, accessibility, and search rankings with advanced performance optimizations and SEO best practices.",
+//         image: seo, // Replace with actual image
+//     },
+// ];
 const services = [
     {
         title: "Custom Web Development",
         description:
             "I build responsive, high-performance websites using the latest technologies. Get a custom solution tailored to your needs.",
-        image: customWebdevelopment, // Replace with actual image
+        image: customWebdevelopment,
+    },
+    {
+        title: "E-Commerce Solutions",
+        description:
+            "I develop fully-featured e-commerce websites with secure payment integration, smooth product management, and user-friendly shopping experiences to help grow your online business.",
+        image: ecommerceImage, // Add an appropriate ecommerce image
     },
     {
         title: "Full-Stack Web Applications",
         description:
             "From backend to frontend, I develop dynamic and scalable web applications using the MERN stack to deliver seamless user experiences.",
-        image: fullstack, // Replace with actual image
+        image: fullstack,
     },
     {
         title: "API Development & Integration",
         description:
             "I create RESTful and GraphQL APIs that connect your application with third-party services or build custom APIs to enhance functionality.",
-        image: apiimplement, // Replace with actual image
+        image: apiimplement,
     },
     {
         title: "Performance Optimization & SEO",
         description:
             "Boost your website’s speed, accessibility, and search rankings with advanced performance optimizations and SEO best practices.",
-        image: seo, // Replace with actual image
+        image: seo,
     },
+
+    {
+        title: "Agency & Business Websites",
+        description:
+            "Custom-built websites designed to showcase your brand and services professionally, optimized for lead generation and customer engagement.",
+        image: agencyWebsiteImage, // Add an appropriate agency image
+    },
+    {
+        title: "Point of Sale (POS) Systems",
+        description:
+            "Robust POS software tailored to your business needs, offering real-time inventory, sales tracking, and seamless checkout experiences.",
+        image: posImage, // Add an appropriate POS image
+    },
+    {
+        title: "Comprehensive Management System",
+        description:
+            "A versatile web application that integrates project, customer, employee, and inventory management into one seamless platform, helping businesses streamline operations and improve productivity.",
+        image: managementimg, // Add an appropriate POS image
+    }
 ];
 
 const ServiceSection = () => {
     return (
-        <section className="bg-black py-12 px-5">
-            <div className="px-6">
-                <h2 className="text-3xl font-bold text-white text-center mb-12">
+        <section className="pb-20 pt-10 px-5 bg-slate-50">
+            <div className="max-w-7xl mx-auto sm:px-6">
+                <h2 className="text-3xl font-bold text-center mb-20">
                     My Services
                 </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7 lg:gap-y-10">
                     {services.map((service, index) => (
                         <div
                             key={index}
-                            className="bg-[#0a0a0a] border border-[#18181b] shadow-lg shadow-[#18181b] rounded-2xl  text-center hover:scale-105 transition-all duration-300">
+                            className="bg-[#0a0a0a] border border-[#18181b] shadow-[#18181b] rounded-lg text-center hover:scale-105 transition-all duration-300">
                             <div className="mb-4">
                                 <Image
                                     src={service?.image}
                                     alt={service?.title}
                                     width={200}
                                     height={200}
-                                    className="rounded-t-lg object-cover w-full"
+                                    className="rounded-t-lg object-cover w-full max-h-[250px]"
                                 />
                             </div>
                             <div className="p-4">
