@@ -3,7 +3,10 @@
 import {
     Navbar,
     NavbarBrand,
+    NavbarContent,
+    NavbarItem,
     NavbarMenuItem,
+    NavbarMenuToggle,
 } from "@nextui-org/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -30,18 +33,18 @@ export default function CustomNavbar() {
                 onMenuOpenChange={setIsMenuOpen}
                 isMenuOpen={isMenuOpen}
                 isBordered
-                className="bg-white bg-opacity-55"
+                className="bg-white bg-opacity-25"
             >
                 {/* Logo / Brand */}
                 <NavbarBrand>
-                    <Link href="/" className="uppercase font-extrabold gap-2 flex items-center text-xl" style={{ color: "red" }}>
+                    <Link href="/" className="uppercase font-extrabold gap-1 flex items-center text-xl" style={{ color: "red" }}>
                         <FaCode size={35} />
                         PaulDev
                     </Link>
                 </NavbarBrand>
 
                 {/* Desktop Menu: visible on lg and above */}
-                {/* <NavbarContent className="hidden lg:flex gap-6" justify="center">
+                <NavbarContent className="hidden lg:flex gap-6" justify="center">
                 {menuBar.map((item) => (
                     <NavbarItem key={item.name} isActive={pathname === item.url}>
                         <Link
@@ -53,14 +56,14 @@ export default function CustomNavbar() {
                         </Link>
                     </NavbarItem>
                 ))}
-            </NavbarContent> */}
+            </NavbarContent>
 
                 {/* Mobile Toggle Button: only shown on <lg */}
-                {/* <NavbarContent justify="end" className="md:hidden">
+                <NavbarContent justify="end" className="md:hidden">
                 <NavbarMenuToggle
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                 />
-            </NavbarContent> */}
+            </NavbarContent>
 
                 <div className="hidden md:flex gap-5">
                     {menuBar.map((item) => {
@@ -83,7 +86,7 @@ export default function CustomNavbar() {
                     })}
                 </div>
                 {/* Mobile Menu Drawer */}
-                {/* <NavbarMenu className="lg:hidden">
+                {/* <NavbarMenu className="md:hidden">
                 {menuBar.map((item) => (
                     <NavbarMenuItem key={item.name}>
                         <Link

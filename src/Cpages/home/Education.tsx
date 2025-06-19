@@ -8,7 +8,7 @@ import Container from '@/src/components/Container';
 const EducationSection: React.FC = () => {
     return (
         <Container classname='md:pt-10 mt-5 md:mt-0 pb-5 md:pb-20 educationSection font-sans'>
-            {/* <h2 className="text-lg md:text-3xl lg:text-4xl font-bold text-center mb-12">Education</h2> */}
+            {/* <h2 className="text-base md:text-lg md:text-3xl lg:text-4xl font-bold text-center mb-12">Education</h2> */}
             <SectionTitle title="Education" className=''>
                 <p className=''>All of my educational qualifiction</p>
             </SectionTitle>
@@ -18,16 +18,18 @@ const EducationSection: React.FC = () => {
                     <CardBody>
                         <div className='flex gap-4 mb-5 items-center'>
                             <div className='bg-gray-200 size-16 rounded-full flex justify-center items-center'>
-                                <Image src={educationIcon} alt='Education' width={200} height={200} className='size-10' />
+                                <Image src={educationIcon} alt='Education' width={200} height={200} className='size-10 block' />
                             </div>
                             <div>
-                                <h3 className="text-lg font-bold">Master of Business Administration (MBA)</h3>
+                                <h3 className="text-base md:text-lg font-bold">Master of Business Administration (MBA)</h3>
                                 <h3 className="text-sm text-gray-600">2023 – Present</h3>
                             </div>
                         </div>
                         <h3 className="mt-2">
-                            <strong className='md:text-md uppercase'>national University</strong>  (Management) <br />
-                            Currently pursuing my MBA, focusing on Business Management. This program enhances my strategic thinking, decision-making abilities, and leadership skills, which are crucial for managing projects effectively in the tech industry.
+                            <strong className='text-sm md:text-md uppercase'>national University</strong>  (Management) <br />
+                            <p className="text-sm md:text-base">
+                                Currently pursuing my MBA, focusing on Business Management. This program enhances my strategic thinking, decision-making abilities, and leadership skills, which are crucial for managing projects effectively in the tech industry.
+                            </p>
                         </h3>
                     </CardBody>
                 </Card>
@@ -35,18 +37,20 @@ const EducationSection: React.FC = () => {
                     <CardBody>
                         <div className='flex gap-4 mb-5 items-center'>
                             <div className='bg-gray-200 size-16 rounded-full flex justify-center items-center'>
-                                <Image src={educationIcon} alt='Education' width={200} height={200} className='size-10' />
+                                <Image src={educationIcon} alt='Education' width={200} height={200} className='size-10 block' />
                             </div>
                             <div>
-                                <h3 className="text-lg font-bold">
+                                <h3 className="text-base md:text-lg font-bold">
                                     Bachelor of Business Administration (BBA)
                                 </h3>
                                 <h3 className="text-sm text-gray-600">Graduated in 2021</h3>
                             </div>
                         </div>
                         <h3 className="mt-2">
-                            <strong className='md:text-md uppercase'>national University</strong>  (Management) <br />
-                            Graduated with a BBA in Management, developing a strong foundation in business operations, project management, and organizational behavior. This coursework has equipped me with essential tools for leading teams and driving business success.
+                            <strong className='text-sm md:text-md uppercase'>national University</strong>  (Management) <br />
+                            <p className="text-sm md:text-base">
+                                Graduated with a BBA in Management, developing a strong foundation in business operations, project management, and organizational behavior. This coursework has equipped me with essential tools for leading teams and driving business success.
+                            </p>
                         </h3>
                     </CardBody>
                 </Card>
@@ -55,18 +59,21 @@ const EducationSection: React.FC = () => {
                     <CardBody>
                         <div className='flex gap-4 mb-5 items-center'>
                             <div className='bg-gray-200 size-16 rounded-full flex justify-center items-center'>
-                                <Image src={educationIcon} alt='Education' width={200} height={200} className='size-10' />
+                                <Image src={educationIcon} alt='Education' width={200} height={200} className='size-10 block' />
                             </div>
                             <div>
-                                <h3 className="text-lg font-bold">
+                                <h3 className="text-base md:text-lg font-bold">
                                     Higher Secondary Certificate(HSC)
                                 </h3>
                                 <h3 className="text-sm text-gray-600">Graduated in 2021</h3>
                             </div>
                         </div>
                         <h3 className="mt-2">
-                            <strong className='md:text-md uppercase'>Mymensingh Gov. College</strong>  (Business) <br />
-                            I completed my HSC from Mymensingh Government College, where I first nurtured my interest in management and leadership, paving the way for my journey in business and technology. </h3>
+                            <strong className='text-sm md:text-md uppercase'>Mymensingh Gov. College</strong>  (Business) <br />
+                            <p className="text-sm md:text-base">
+                                I completed my HSC from Mymensingh Government College, where I first nurtured my interest in management and leadership, paving the way for my journey in business and technology.
+                            </p>
+                        </h3>
                     </CardBody>
                 </Card>
                 {/* Developer Proficiency Section */}
@@ -74,22 +81,22 @@ const EducationSection: React.FC = () => {
                     <CardBody>
                         <div className='flex gap-4 mb-5 items-center'>
                             <div className='bg-gray-200 size-16 rounded-full flex justify-center items-center'>
-                                <Image src={educationIcon} alt='Education' width={200} height={200} className='size-10' />
+                                <Image src={educationIcon} alt='Education' width={200} height={200} className='size-10 block' />
                             </div>
                             <div>
-                                <h3 className="text-lg font-bold">
+                                <h3 className="text-base md:text-lg font-bold">
                                     Proficient Developer with Business Acumen
                                 </h3>
                             </div>
                         </div>
 
-                        <h3 className="mt-2">
+                        <h3 className="mt-2 text-sm md:text-base">
                             Alongside my academic achievements, I am a highly skilled web developer with expertise in modern web technologies like <strong>React.js, Node.js, Next.js, Tailwind CSS,</strong> and <strong>MongoDB</strong>. My combination of business education and technical skills allows me to approach projects holistically, ensuring strong code and sustainable business solutions.
                         </h3>
                     </CardBody>
                 </Card>
             </div>
-        </Container>
+        </Container >
 
     );
 };

@@ -7,19 +7,24 @@ import Container from '@/src/components/Container'
 import MyLink, { } from '@/src/components/MyLinks/MyLink'
 export const Hero = () => {
     return (
-        <Container classname='py-5 md:py-20 bg-emerald-950 bg-opacity-35'>
+        <Container classname="py-5 md:py-20 bg-gradient-to-b md:bg-gradient-to-r from-white via-emerald-100 to-cyan-900">
             <div className='grid grid-cols-1 md:grid-cols-2 py-10'>
                 <div>
                     <h1 className='font-extrabold text-2xl sm:text-3xl font-open_sans'>I&apos;M,</h1>
                     <div className='flex items-center flex-wrap gap-2'>
                         <AnimateText /> <h2 className='text-2xl sm:text-[3em] font-[800]'>Developer</h2>
                     </div>
-                    <div className='md:mt-10'>
+                    {/* <div className='md:mt-10'>
                         <p className='md:text-lg'>
                             I am <span className='font-semibold'>Sumon Chandra Paul</span>. I&apos;m a passionate web developer with a focus on creating dynamic and visually appealing websites that drive user engagement. With expertise in both front-end and back-end technologies, including Next.js, TypeScript, React, Node.js, and MongoDB.
                         </p>
+                    </div> */}
+                    <div className="mt-10">
+                        <p>
+                            I&apos;m <strong>Sumon Chandra Paul</strong>, a dedicated and results-driven web developer specializing in building high-performance, visually engaging web applications. With strong proficiency in <strong>Next.js</strong>, <strong>TypeScript</strong>, <strong>React</strong>, <strong>Node.js</strong>, and <strong>MongoDB</strong>, I bring full-stack expertise to craft seamless user experiences and scalable backend solutions. I thrive on turning complex problems into elegant, functional designs and am committed to writing clean, efficient code that drives real-world impact.
+                        </p>
                     </div>
-                    <div className='mt-4 md:mt-10 flex gap-10 text-sm md:text-base'>
+                    <div className='mt-4 md:mt-10 flex gap-3 md:gap-10 text-sm md:text-base'>
                         <MyLink url='https://drive.google.com/file/d/12e53gBp7IF8nUPXuxCJWbSKFTcucYLl3/view?usp=sharing' target="_blank" className="bg-primary text-white py-2 px-4 rounded-md font-semibold font-sans hover:bg-white hover:text-primary hover:border border duration-400">
                             View Resume
                         </MyLink>
