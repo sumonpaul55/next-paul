@@ -7,25 +7,25 @@ import Container from '@/src/components/Container'
 import MyLink, { } from '@/src/components/MyLinks/MyLink'
 export const Hero = () => {
     return (
-        <Container classname='py-5 md:py-20 bg-slate-950'>
-            <div className='grid grid-cols-1 md:grid-cols-2 py-10 text-white'>
+        <Container classname='py-5 md:py-20 bg-emerald-950 bg-opacity-35'>
+            <div className='grid grid-cols-1 md:grid-cols-2 py-10'>
                 <div>
                     <h1 className='font-extrabold text-2xl sm:text-3xl font-open_sans'>I&apos;M,</h1>
                     <div className='flex items-center flex-wrap gap-2'>
                         <AnimateText /> <h2 className='text-2xl sm:text-[3em] font-[800]'>Developer</h2>
                     </div>
                     <div className='md:mt-10'>
-                        <p className='md:text-lg text-paragraphText'>
-                            I am <span className='text-white font-semibold'>Sumon Chandra Paul</span>. I&apos;m a passionate web developer with a focus on creating dynamic and visually appealing websites that drive user engagement. With expertise in both front-end and back-end technologies, including Next.js, TypeScript, React, Node.js, and MongoDB.
+                        <p className='md:text-lg'>
+                            I am <span className='font-semibold'>Sumon Chandra Paul</span>. I&apos;m a passionate web developer with a focus on creating dynamic and visually appealing websites that drive user engagement. With expertise in both front-end and back-end technologies, including Next.js, TypeScript, React, Node.js, and MongoDB.
                         </p>
                     </div>
                     <div className='mt-4 md:mt-10 flex gap-10 text-sm md:text-base'>
-                        <MyLink url='https://drive.google.com/file/d/12e53gBp7IF8nUPXuxCJWbSKFTcucYLl3/view?usp=sharing' target="_blank" className="bg-primary text-white p-2 rounded-md font-semibold font-sans hover:bg-white hover:text-primary hover:border border duration-400">
+                        <MyLink url='https://drive.google.com/file/d/12e53gBp7IF8nUPXuxCJWbSKFTcucYLl3/view?usp=sharing' target="_blank" className="bg-primary text-white py-2 px-4 rounded-md font-semibold font-sans hover:bg-white hover:text-primary hover:border border duration-400">
                             View Resume
                         </MyLink>
                         <a href={`resume.pdf`} download target="_blank" className={`relative inline-block px-2 md:px-6 py-2 font-semibold text-primary border-slate-500 rounded-lg overflow-hidden transition-colors duration-300 ease-in-out group hover:text-white border`}>
-                            <span className="absolute inset-0 bg-slate-800 transform translate-x-full transition-transform duration-500 ease-out group-hover:translate-x-0"></span>
-                            <span className="relative z-10 text-white">Downdload Resume</span>
+                            <span className="absolute inset-0 transform translate-x-full transition-transform duration-500 ease-out group-hover:translate-x-0"></span>
+                            <span className="relative z-10">Downdload Resume</span>
                         </a>
                     </div>
                 </div>

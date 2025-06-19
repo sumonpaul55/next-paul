@@ -19,7 +19,7 @@ const AnimateText = () => {
             wrapper="span"
             speed={2}
             className='animated-text'
-            style={{ display: 'inline-block', fontWeight: "600", color: "#3b82f6" }}
+            style={{ display: 'inline-block', fontWeight: "600", color: "#02245c" }}
             repeat={Infinity}
         />
     )
