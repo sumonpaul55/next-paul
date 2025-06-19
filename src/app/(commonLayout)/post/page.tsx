@@ -6,7 +6,7 @@ const PostPage = () => {
   return (
     <>
       <LoadingDoor />
-      <Container classname="bg-teal-50 h-full">
+      <Container classname="bg-teal-50 h-full py-10">
         <AllBlogs />
       </Container>
     </>
