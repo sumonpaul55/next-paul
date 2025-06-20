@@ -10,7 +10,7 @@ import React from 'react'
 const AllBlogs = () => {
     const { data, isLoading } = useGetpost()
     return (
-        <Container classname='py-5'>
+        <Container classname='py-5 mb-10'>
             <div>
                 <h2 className='mb-5 text-lg font-semibold text-white'>All Blogs</h2>
                 {/* <SectionTitle title='Latest Blogs'>
