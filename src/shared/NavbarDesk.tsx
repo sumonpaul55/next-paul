@@ -28,13 +28,12 @@ export default function CustomNavbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <div className="sticky top-0 z-50">
+        <div className="sticky top-0 z-[9999]">
             <Navbar
                 onMenuOpenChange={setIsMenuOpen}
                 isMenuOpen={isMenuOpen}
                 isBordered
-                className="bg-white bg-opacity-25"
-            >
+                className="bg-white bg-opacity-25">
                 {/* Logo / Brand */}
                 <NavbarBrand>
                     <Link href="/" className="uppercase font-extrabold gap-1 flex items-center text-xl" style={{ color: "red" }}>
