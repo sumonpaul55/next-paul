@@ -25,10 +25,10 @@ export const Hero = () => {
                         </p>
                     </div>
                     <div className='mt-4 md:mt-10 flex gap-3 md:gap-10 text-sm md:text-base'>
-                        <MyLink url='https://drive.google.com/file/d/12e53gBp7IF8nUPXuxCJWbSKFTcucYLl3/view?usp=sharing' target="_blank" className="bg-primary text-white py-2 px-4 rounded-md font-semibold font-sans hover:bg-white hover:text-primary hover:border border duration-400">
+                        <MyLink url='https://drive.google.com/file/d/12e53gBp7IF8nUPXuxCJWbSKFTcucYLl3/view?usp=sharing' target="_blank" className="bg-primary text-white py-2 px-4 rounded-md font-semibold font-sans hover:bg-white hover:text-primary hover:border border border-black duration-400">
                             View Resume
                         </MyLink>
-                        <a href={`resume.pdf`} download target="_blank" className={`relative inline-block px-2 md:px-6 py-2 font-semibold text-primary border-slate-500 rounded-lg overflow-hidden transition-colors duration-300 ease-in-out group hover:text-white border`}>
+                        <a href={`resume.pdf`} download target="_blank" className={`relative inline-block px-2 md:px-6 py-2 font-semibold text-primary border-slate-500 rounded-lg overflow-hidden transition-colors duration-300 ease-in-out group hover:text-white border hover:bg-primary`}>
                             <span className="absolute inset-0 transform translate-x-full transition-transform duration-500 ease-out group-hover:translate-x-0"></span>
                             <span className="relative z-10">Downdload Resume</span>
                         </a>
