@@ -39,7 +39,7 @@ export default function CustomNavbar() {
                 {/* Logo / Brand */}
                 <NavbarBrand>
                     <Link href="/" className="uppercase font-extrabold gap-1 flex items-center text-xl" style={{ color: "red" }}>
-                        <Image src={devpaul} width={300} height={150} alt="DEVPAUL"/>
+                        <Image className="sm:w-3/4" src={devpaul} width={300} height={150} alt="DEVPAUL"/>
                     </Link>
                 </NavbarBrand>
 
