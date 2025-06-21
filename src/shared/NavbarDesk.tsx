@@ -9,10 +9,11 @@ import {
     NavbarMenuItem,
     NavbarMenuToggle,
 } from "@nextui-org/react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { FaCode } from "react-icons/fa";
+import devpaul from "../../public/img/devpaul.png";
 
 // Menu items
 const menuBar = [
@@ -38,8 +39,7 @@ export default function CustomNavbar() {
                 {/* Logo / Brand */}
                 <NavbarBrand>
                     <Link href="/" className="uppercase font-extrabold gap-1 flex items-center text-xl" style={{ color: "red" }}>
-                        <FaCode size={35} />
-                        PaulDev
+                        <Image src={devpaul} width={300} height={150} alt="DEVPAUL"/>
                     </Link>
                 </NavbarBrand>
 
