@@ -5,6 +5,7 @@ import {
     NavbarBrand,
     NavbarContent,
     NavbarItem,
+    NavbarMenu,
     NavbarMenuItem,
     NavbarMenuToggle,
 } from "@nextui-org/react";
@@ -28,7 +29,7 @@ export default function CustomNavbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <div className="sticky top-0 z-[9999]">
+        <div className="sticky top-0" style={{ zIndex: 9999 }}>
             <Navbar
                 onMenuOpenChange={setIsMenuOpen}
                 isMenuOpen={isMenuOpen}
@@ -85,7 +86,7 @@ export default function CustomNavbar() {
                     })}
                 </div>
                 {/* Mobile Menu Drawer */}
-                {/* <NavbarMenu className="md:hidden">
+                <NavbarMenu className="md:hidden">
                 {menuBar.map((item) => (
                     <NavbarMenuItem key={item.name}>
                         <Link
@@ -100,7 +101,7 @@ export default function CustomNavbar() {
                         </Link>
                     </NavbarMenuItem>
                 ))}
-            </NavbarMenu> */}
+            </NavbarMenu>
             </Navbar>
         </div>
     );

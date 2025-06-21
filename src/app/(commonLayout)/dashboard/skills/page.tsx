@@ -6,8 +6,6 @@ const Skills = () => {
     return (
         <>
             <LoadingDoor />
-
-
             <div className='bg-gray-100 px-3 py-2'>
                 <div className='py-4 flex justify-between'>
                     <h2 className='font-semibold text-lg md:text-xl'>Skills</h2>

@@ -9,7 +9,7 @@ import React from 'react'
 const PostSection = () => {
     const { data } = useGetpost()
     return (
-        <Container classname='md:py-20 border-t md:border-gray-800 md:mt-0 mt-7'>
+        <Container classname='py-20 border-t md:border-gray-800 md:mt-0 mt-7'>
             <div>
                 <SectionTitle title='Latest Blogs' className=''>
                     <p className=''>Here is showing last 6 blogs from my all blogs you can see all of my blogs from the blogs page. If you want to read more blogs please click the blog route. Some of blog written by and some of blogs can be writen by random user</p>

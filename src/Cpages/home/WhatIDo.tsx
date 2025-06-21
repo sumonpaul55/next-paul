@@ -11,7 +11,7 @@ const WhatIDo = () => {
     const { data, isLoading } = useGetSkills();
     return (
         <div className='container mx-auto'>
-            <Container classname='pb-16 md:pb-0 md:py-20'>
+            <Container classname='py-20'>
                 <div className=''>
                     <SectionTitle className='text-black' title='What I do'>
                         <p className='md:text-lg'>I have over 2 years of experience building responsive and engaging front-end applications, as well as 1+ year of experience working with the MERN (MongoDB, Express, React, Node.js) stack for full-stack development.

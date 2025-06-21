@@ -5,6 +5,13 @@ import SectionTitle from "@/src/components/shared/SectionTitle"
 import SkillsCard from "@/src/components/shared/SkillsCard"
 // import { getSkills } from "@/src/services/skills/skill"
 
+
+
+export const metadata = {
+    title: "Skills | Sumon Paul",
+    description: "Explore my skills in web development, including React, Next.js, Node.js, MongoDB, Express.js, and Tailwind CSS. I specialize in building fast, responsive, and SEO-friendly websites with a focus on clean design and great user experience.",
+};
+
 const SkillsPage = async () => {
     // const { data } = await getSkills();
 
