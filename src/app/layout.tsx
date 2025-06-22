@@ -8,6 +8,7 @@ import Provider from "@/src/libs/providers/Provider";
 import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
+import CustomCursor from "../shared/CustomeCursor";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -87,10 +88,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning={false}>
+      <script src="//code.tidio.co/4s2gst7pfzszo5kccx9z7aflfa5gjumy.js" async></script>
       <body className={`${geistSans.variable} ${geistMono.variable} ${roboto_slab.variable} ${open_sans.variable} antialiased`}>
         <Provider>
           <MainLayout>
             {children}
+            <CustomCursor />
           </MainLayout>
         </Provider>
         {/* Footer */}

@@ -10,6 +10,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        bubbleExpand: {
+          '0%': { transform: 'scale(0.2)', opacity: '0.6' },
+          '50%': { transform: 'scale(2)', opacity: '0.2' },
+          '100%': { transform: 'scale(5)', opacity: '0' },
+        },
+      },
+      animation: {
+        bubbleExpand: 'bubbleExpand 1.2s forwards',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
