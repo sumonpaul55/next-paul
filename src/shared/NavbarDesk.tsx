@@ -19,10 +19,11 @@ import devpaul from "../../public/img/devpaul.png";
 const menuBar = [
     { name: "Dashboard", url: "/dashboard" },
     { name: "Home", url: "/" },
-    { name: "Contact", url: "/contact" },
     { name: "Projects", url: "/projects" },
     { name: "Skills", url: "/skills" },
     { name: "Blog", url: "/post" },
+    { name: "About", url: "/about" },
+    { name: "Contact", url: "/contact" },
 ];
 
 export default function CustomNavbar() {
@@ -38,8 +39,9 @@ export default function CustomNavbar() {
                 className="bg-white bg-opacity-25">
                 {/* Logo / Brand */}
                 <NavbarBrand>
-                    <Link href="/" className="uppercase font-extrabold gap-1 flex items-center text-xl">
-                        <Image src={devpaul} width={300} height={150} alt="DEVPAUL" style={{maxWidth: "170px"}}/>
+                    <Link href="/" className="uppercase font-extrabold flex items-center text-xl">
+                        <Image src={devpaul} width={300} height={150} alt="DEVPAUL" style={{ maxWidth: "170px" }} />
+                        <b className="font-sans font-semibold" style={{fontSize: "26px"}}>IT</b>
                     </Link>
                 </NavbarBrand>
 

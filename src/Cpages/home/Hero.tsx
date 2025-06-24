@@ -21,8 +21,9 @@ export const Hero = () => {
                     </div> */}
                     <div className="mt-10">
                         <p>
-                            I&apos;m <strong>Sumon Chandra Paul</strong>, a dedicated and results-driven web developer specializing in building high-performance, visually engaging web applications. With strong proficiency in <strong>Next.js</strong>, <strong>TypeScript</strong>, <strong>React</strong>, <strong>Node.js</strong>, and <strong>MongoDB</strong>, I bring full-stack expertise to craft seamless user experiences and scalable backend solutions. I thrive on turning complex problems into elegant, functional designs and am committed to writing clean, efficient code that drives real-world impact.
+                            I&apos;m <strong>Sumon Chandra Paul</strong>, a passionate and performance-focused full-stack web developer with a strong emphasis on front-end excellence. I specialize in building fast, scalable, and visually impactful applications using technologies like <strong>Next.js</strong>, <strong>TypeScript</strong>, <strong>React</strong>, <strong>Node.js</strong>, and <strong>MongoDB</strong>. I’m driven by the challenge of transforming ideas into intuitive user experiences and clean, maintainable code. With a commitment to best practices and modern architecture, I deliver reliable, real-world solutions that perform and scale.
                         </p>
+
                     </div>
                     <div className='mt-4 md:mt-10 flex gap-3 md:gap-10 text-sm md:text-base'>
                         <MyLink url='https://drive.google.com/file/d/12e53gBp7IF8nUPXuxCJWbSKFTcucYLl3/view?usp=sharing' target="_blank" className="bg-primary text-white py-2 px-4 rounded-md font-semibold font-sans hover:bg-white hover:text-primary hover:border border border-black duration-400">

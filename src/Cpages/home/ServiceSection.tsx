@@ -1,10 +1,10 @@
 import Image from "next/image";
 import customWebdevelopment from "@/src/../public/img/webdevelopment.png"
-import fullstack from "@/src/../public/img/fullstack.png"
+import figma from "@/src/../public/img/figma.jpg"
 import apiimplement from "@/src/../public/img/apiimplement.png"
 import ecommerceImage from "@/src/../public/img/ecommerce.jpg"
 import agencyWebsiteImage from "@/src/../public/img/agency.jpg"
-import seo from "@/src/../public/img/seo.jpg"
+import portfolio from "@/src/../public/img/portfolio.png"
 import posImage from "@/src/../public/img/pos.jpg"
 import managementimg from "@/src/../public/img/management.jpg"
 // const services = [
@@ -47,10 +47,10 @@ const services = [
         image: ecommerceImage, // Add an appropriate ecommerce image
     },
     {
-        title: "Full-Stack Web Applications",
+        title: "Figma to React.js and Next.js",
         description:
-            "From backend to frontend, I develop dynamic and scalable web applications using the MERN stack to deliver seamless user experiences.",
-        image: fullstack,
+            " I convert Figma designs into pixel-perfect, responsive websites using React and Next.js. Clean code, reusable components, and full mobile responsiveness — just like the design intended.",
+        image: figma,
     },
     {
         title: "API Development & Integration",
@@ -59,10 +59,10 @@ const services = [
         image: apiimplement,
     },
     {
-        title: "Performance Optimization & SEO",
+        title: "Portfolio Websites",
         description:
-            "Boost your website’s speed, accessibility, and search rankings with advanced performance optimizations and SEO best practices.",
-        image: seo,
+            "I build fast, responsive, and SEO-friendly portfolio websites using React & Next.js. Perfect for developers, designers, and creatives who want to showcase their work professionally.",
+        image: portfolio,
     },
 
     {
@@ -97,17 +97,17 @@ const ServiceSection = () => {
                         <div
                             key={index}
                             className="bg-[#0a0a0a] border border-[#18181b] shadow-[#18181b] rounded-lg text-center hover:scale-105 transition-all duration-300">
-                            <div className="mb-4">
+                            <div className="mb-2">
                                 <Image
                                     src={service?.image}
                                     alt={service?.title}
-                                    width={200}
-                                    height={200}
-                                    className="rounded-t-lg object-cover w-full max-h-[250px]"
+                                    width={400}
+                                    height={500}
+                                    className="rounded-t-lg lg:object-top w-full max-h-[220px]"
                                 />
                             </div>
                             <div className="p-4">
-                                <h3 className="text-lg font-semibold text-white leading-5 mb-3 border-b pb-4 border-gray-500">
+                                <h3 className="text-lg capitalize font-semibold text-white leading-5 mb-3 border-b pb-4 border-gray-500">
                                     {service?.title}
                                 </h3>
                                 <p className="text-paragraphText text-sm">{service.description}</p>

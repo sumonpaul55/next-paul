@@ -7,13 +7,15 @@ const AnimateText = () => {
         <TypeAnimation
             sequence={[
                 // Same substring at the start will only be typed out once, initially
-                'Front-End',
+                'Mern-Stack',
                 1000, // wait 1s before replacing "Mice" with "Hamsters"
                 'React.js',
                 2000,
+                'Front end',
+                2000,
                 'Next.js',
                 2000,
-                'Mern-Stack',
+                'JavaScript',
                 2000
             ]}
             wrapper="span"

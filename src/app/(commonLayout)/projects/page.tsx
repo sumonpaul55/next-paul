@@ -1,5 +1,6 @@
 import LoadingDoor from "@/src/components/shared/LoadinDoor"
 import AllProject from "@/src/Cpages/projects/AllProject"
+import Script from "next/script";
 
 export const metadata = {
     title: "Projects | Sumon Paul",
@@ -7,10 +8,29 @@ export const metadata = {
 };
 const ProjectPage = () => {
     return (
-        <div>
-            <LoadingDoor />
-            <AllProject />
-        </div>
+        <>
+            <Script
+                async
+                src="https://www.googletagmanager.com/gtag/js?id=G-1837Y90YZZ"
+                strategy="afterInteractive"
+            />
+            <Script
+                id="gtag-init"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                    __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            gtag('config', 'G-1837Y90YZZ');
+            `,
+                }}
+            />
+            <div>
+                <LoadingDoor />
+                <AllProject />
+            </div>
+        </>
     )
 }
 

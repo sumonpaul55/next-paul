@@ -3,6 +3,7 @@ import LoadingDoor from "@/src/components/shared/LoadinDoor"
 
 import SectionTitle from "@/src/components/shared/SectionTitle"
 import SkillsCard from "@/src/components/shared/SkillsCard"
+import Script from "next/script";
 // import { getSkills } from "@/src/services/skills/skill"
 
 
@@ -20,9 +21,25 @@ const SkillsPage = async () => {
     });
 
     const data = await res?.json()
-
     return (
         <>
+            <Script
+                async
+                src="https://www.googletagmanager.com/gtag/js?id=G-1837Y90YZZ"
+                strategy="afterInteractive"
+            />
+            <Script
+                id="gtag-init"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                    __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-1837Y90YZZ');
+            `,
+                }}
+            />
             <LoadingDoor />
             <Container classname="pb-10 mt-20">
                 <div>

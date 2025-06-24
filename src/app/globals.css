@@ -10,6 +10,10 @@
 
 }
 
+/* .tidio-10kc66r {
+  display: none !important;
+}
+ */
 
 @keyframes bganimation {
   0% {
@@ -53,6 +57,7 @@
     font-size: 30px;
   }
 }
+
 
 /* Apply the animation to the .animate-circle class */
 .animate-circle {

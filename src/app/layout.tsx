@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Open_Sans, Roboto_Slab } from 'next/font/google'
+import Script from 'next/script';
+
 
 import "./globals.css";
 import MainLayout from "@/src/components/layouts/MainLayout";
@@ -88,7 +90,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning={false}>
-      <script src="//code.tidio.co/4s2gst7pfzszo5kccx9z7aflfa5gjumy.js" async></script>
+      <head>
+        {/* Google Analytics Script */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-1837Y90YZZ"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+             gtag('config', 'G-1837Y90YZZ');
+            `,
+          }}
+        />
+        <script src="//code.tidio.co/4s2gst7pfzszo5kccx9z7aflfa5gjumy.js" async></script>
+      </head>
+
       <body className={`${geistSans.variable} ${geistMono.variable} ${roboto_slab.variable} ${open_sans.variable} antialiased`}>
         <Provider>
           <MainLayout>
