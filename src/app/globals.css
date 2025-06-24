@@ -66,6 +66,16 @@
   transform-origin: center;
 }
 
+
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-group {
+  animation-duration: .6s;
+}
+
+
 @keyframes rotate {
   from {
     transform: rotate(0deg);
